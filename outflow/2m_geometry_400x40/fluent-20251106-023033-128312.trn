@@ -1,0 +1,741 @@
+Auto-Transcript Start Time:  02:30:33, 06 Nov 2025 GMT Standard Time 
+Current Directory: "C:\Users\y.chavali.176\OneDrive - Cranfield University\fm_assignment\outflow\2m_geometry_400x40"
+
+              Welcome to ANSYS Fluent 2025 R2
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Jun 16 2025 10:46:43 EDT  Build Id: 10204  
+ 
+Connected License Server List:	1055@cclic-2.central.cranfield.ac.uk
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "83RPC017" (win64).
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID     Vendor                         
+-------------------------------------------------------------------------------
+n3    83RPC017  4/8  Windows-x64  137116  Intel(R) Core(TM) i7-7700      
+n2    83RPC017  3/8  Windows-x64  129660  Intel(R) Core(TM) i7-7700      
+n1    83RPC017  2/8  Windows-x64  124240  Intel(R) Core(TM) i7-7700      
+n0*   83RPC017  1/8  Windows-x64  139812  Intel(R) Core(TM) i7-7700      
+host  83RPC017       Windows-x64  136624  Intel(R) Core(TM) i7-7700      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\y.chavali.176\\OneDrive - Cranfield University\\fm_assignment\\outflow\\2m_geometry_400x40\\cleanup-fluent-83RPC017-136624.bat
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+Fast-loading "C:\PROGRA~1\ANSYSI~1\v252\fluent\fluent25.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+83RPC017 is already loaded (21.4901).                       Process affinity not being set.
+
+Reading from 83RPC017:"C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/outflow/2m_geometry_400x40/fine2m.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       16000 cells,     1 cell zone  ...
+          16000 quadrilateral cells,  zone id: 8
+       32440 faces,     5 face zones ...
+          31560 2D interior faces,  zone id: 9
+             40 2D velocity-inlet faces,  zone id: 10
+             40 2D outflow faces,  zone id: 11
+            400 2D wall faces,  zone id: 12
+            400 2D wall faces,  zone id: 13
+       16441 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 40/45 = 0.888889
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottomwall
+	topwall
+	inlet
+	int_fluid
+	outlet
+	fluid
+     parallel,
+Done.
+
+> (cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton1(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-selections "Boundary Conditions*Table1*List2(Zone)" '( 3))
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*List2(Zone)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+     1  0.0000e+00  5.4633e-03  0.0000e+00  0:01:40  999
+     2  1.0000e+00  2.8999e-03  2.8704e-05  0:02:22  998
+     3  9.2776e-01  1.5192e-03  2.5167e-05  0:02:08  997
+     4  8.8353e-01  8.0105e-04  1.6257e-05  0:01:58  996
+     5  7.6844e-01  4.2824e-04  1.0736e-05  0:01:51  995
+     6  6.4031e-01  2.3096e-04  7.2309e-06  0:01:44  994
+     7  5.4254e-01  1.2646e-04  4.9486e-06  0:01:37  993
+     8  4.7330e-01  7.0284e-05  3.4646e-06  0:01:33  992
+     9  4.1678e-01  3.9854e-05  2.5180e-06  0:01:28  991
+    10  3.7187e-01  2.3215e-05  1.8271e-06  0:01:26  990
+    11  3.3863e-01  1.3898e-05  1.3753e-06  0:01:23  989
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    12  3.0699e-01  8.7335e-06  1.1042e-06  0:01:19  988
+    13  2.7568e-01  5.6444e-06  9.3684e-07  0:01:17  987
+    14  2.5184e-01  3.7689e-06  7.5138e-07  0:01:16  986
+    15  2.2992e-01  2.6447e-06  5.9370e-07  0:01:17  985
+    16  2.0906e-01  1.9431e-06  5.1435e-07  0:01:15  984
+    17  1.8981e-01  1.4698e-06  4.4195e-07  0:01:14  983
+    18  1.7243e-01  1.1448e-06  3.6821e-07  0:01:11  982
+    19  1.5819e-01  9.2780e-07  3.0670e-07  0:01:10  981
+    20  1.4522e-01  7.8228e-07  2.7671e-07  0:01:10  980
+    21  1.3309e-01  6.7841e-07  2.5558e-07  0:01:10  979
+    22  1.2174e-01  5.9556e-07  2.3314e-07  0:01:08  978
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    23  1.1133e-01  5.2497e-07  2.1083e-07  0:01:06  977
+    24  1.0181e-01  4.6405e-07  1.8680e-07  0:01:06  976
+    25  9.3090e-02  4.1366e-07  1.6699e-07  0:01:06  975
+    26  8.5110e-02  3.6813e-07  1.4971e-07  0:01:06  974
+    27  7.7814e-02  3.2798e-07  1.3458e-07  0:01:05  973
+    28  7.1237e-02  2.9953e-07  1.2381e-07  0:01:04  972
+    29  6.5280e-02  2.7224e-07  1.1385e-07  0:01:04  971
+    30  5.9937e-02  2.5036e-07  1.0418e-07  0:01:06  970
+    31  5.4978e-02  2.3000e-07  9.5732e-08  0:01:04  969
+    32  5.0421e-02  2.1336e-07  8.7081e-08  0:01:03  968
+    33  4.6255e-02  1.9716e-07  7.9062e-08  0:01:02  967
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    34  4.2431e-02  1.8043e-07  7.2375e-08  0:01:02  966
+    35  3.8913e-02  1.6449e-07  6.6200e-08  0:01:01  965
+    36  3.5644e-02  1.4881e-07  6.2928e-08  0:01:01  964
+    37  3.2633e-02  1.3854e-07  5.5721e-08  0:01:01  963
+    38  2.9954e-02  1.2783e-07  5.0810e-08  0:01:01  962
+    39  2.7505e-02  1.1757e-07  4.6229e-08  0:01:01  961
+    40  2.5251e-02  1.0831e-07  4.2601e-08  0:01:00  960
+    41  2.3185e-02  1.0012e-07  3.9299e-08  0:01:01  959
+    42  2.1295e-02  9.3472e-08  3.6248e-08  0:01:00  958
+    43  1.9574e-02  8.6705e-08  3.3511e-08  0:01:00  957
+    44  1.8001e-02  8.1182e-08  3.1048e-08  0:01:00  956
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    45  1.6563e-02  7.7286e-08  2.8853e-08  0:01:00  955
+    46  1.5195e-02  7.6312e-08  2.7112e-08  0:01:00  954
+    47  1.3921e-02  7.6068e-08  2.5414e-08  0:00:59  953
+    48  1.2750e-02  7.5181e-08  2.3634e-08  0:01:00  952
+    49  1.1677e-02  7.3735e-08  2.1849e-08  0:01:00  951
+    50  1.0675e-02  7.1615e-08  2.0188e-08  0:01:00  950
+    51  9.7443e-03  6.8918e-08  1.8793e-08  0:01:00  949
+    52  8.8802e-03  6.5718e-08  1.7371e-08  0:01:00  948
+    53  8.0803e-03  6.2042e-08  1.5838e-08  0:01:00  947
+    54  7.3462e-03  5.7469e-08  1.4413e-08  0:01:00  946
+    55  6.6853e-03  5.2471e-08  1.3046e-08  0:00:59  945
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    56  6.0700e-03  4.8966e-08  1.1759e-08  0:00:59  944
+    57  5.4893e-03  4.5404e-08  1.0799e-08  0:01:00  943
+    58  4.9584e-03  4.1761e-08  1.0043e-08  0:01:00  942
+    59  4.4719e-03  3.8325e-08  9.1477e-09  0:01:00  941
+    60  4.0409e-03  3.5114e-08  8.3305e-09  0:01:00  940
+    61  3.6539e-03  3.2310e-08  7.4296e-09  0:01:01  939
+    62  3.2999e-03  2.9913e-08  6.6692e-09  0:01:02  938
+    63  2.9569e-03  2.6618e-08  5.9546e-09  0:01:03  937
+    64  2.6589e-03  2.3845e-08  5.4754e-09  0:01:06  936
+    65  2.3970e-03  2.2076e-08  5.2537e-09  0:01:06  935
+    66  2.1626e-03  2.0553e-08  4.8689e-09  0:01:07  934
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    67  1.9451e-03  1.9214e-08  4.3090e-09  0:01:07  933
+    68  1.7439e-03  1.7628e-08  4.2979e-09  0:01:07  932
+    69  1.5748e-03  1.5997e-08  4.2811e-09  0:01:09  931
+    70  1.4145e-03  1.4455e-08  3.7111e-09  0:01:08  930
+    71  1.2583e-03  1.2594e-08  3.2185e-09  0:01:09  929
+    72  1.1146e-03  1.1131e-08  2.9919e-09  0:01:08  928
+    73  9.9041e-04  1.0085e-08  2.9012e-09  0:01:06  927
+    74  8.6395e-04  8.9426e-09  2.6058e-09  0:01:05  926
+    75  7.7000e-04  7.8244e-09  2.1807e-09  0:01:04  925
+    76  6.8629e-04  6.8105e-09  1.9104e-09  0:01:05  924
+    77  6.1040e-04  6.0397e-09  1.7160e-09  0:01:07  923
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    78  5.3431e-04  5.1735e-09  1.5470e-09  0:01:06  922
+    79  4.6653e-04  4.2666e-09  1.3688e-09  0:01:07  921
+    80  4.1338e-04  3.7032e-09  1.1678e-09  0:01:07  920
+    81  3.7202e-04  3.4229e-09  1.0155e-09  0:01:09  919
+    82  3.3763e-04  3.1504e-09  8.8878e-10  0:01:09  918
+    83  3.0872e-04  2.8767e-09  7.8727e-10  0:01:10  917
+    84  2.8290e-04  2.6065e-09  7.0286e-10  0:01:09  916
+    85  2.5948e-04  2.3476e-09  6.3610e-10  0:01:08  915
+    86  2.3786e-04  2.0998e-09  5.7703e-10  0:01:08  914
+    87  2.1776e-04  1.8725e-09  5.2166e-10  0:01:08  913
+    88  1.9929e-04  1.6767e-09  4.6754e-10  0:01:08  912
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    89  1.8259e-04  1.5103e-09  4.1825e-10  0:01:09  911
+    90  1.6733e-04  1.3681e-09  3.7523e-10  0:01:10  910
+    91  1.5321e-04  1.2416e-09  3.3900e-10  0:01:09  909
+    92  1.4021e-04  1.1285e-09  3.0699e-10  0:01:08  908
+    93  1.2825e-04  1.0269e-09  2.7860e-10  0:01:06  907
+    94  1.1725e-04  9.3548e-10  2.5314e-10  0:01:03  906
+    95  1.0714e-04  8.5286e-10  2.3022e-10  0:01:02  905
+    96  9.7849e-05  7.7802e-10  2.0960e-10  0:01:01  904
+    97  8.9354e-05  7.1027e-10  1.9093e-10  0:01:00  903
+    98  8.1579e-05  6.4881e-10  1.7398e-10  0:00:59  902
+    99  7.4448e-05  5.9291e-10  1.5856e-10  0:00:58  901
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   100  6.7909e-05  5.4185e-10  1.4450e-10  0:00:57  900
+   101  6.1920e-05  4.9513e-10  1.3168e-10  0:00:58  899
+   102  5.6435e-05  4.5236e-10  1.1999e-10  0:00:59  898
+   103  5.1415e-05  4.1317e-10  1.0933e-10  0:00:59  897
+   104  4.6822e-05  3.7727e-10  9.9597e-11  0:00:58  896
+   105  4.2624e-05  3.4441e-10  9.0730e-11  0:00:58  895
+   106  3.8789e-05  3.1433e-10  8.2662e-11  0:00:58  894
+   107  3.5287e-05  2.8677e-10  7.5319e-11  0:00:56  893
+   108  3.2092e-05  2.6154e-10  6.8625e-11  0:02:08  892
+   109  2.9179e-05  2.3846e-10  6.2516e-11  0:01:53  891
+   110  2.6528e-05  2.1735e-10  5.6942e-11  0:01:41  890
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   111  2.4127e-05  1.9806e-10  5.1861e-11  0:01:32  889
+   112  2.1938e-05  1.8045e-10  4.7231e-11  0:01:25  888
+   113  1.9945e-05  1.6437e-10  4.3017e-11  0:01:19  887
+   114  1.8129e-05  1.4971e-10  3.9180e-11  0:01:13  886
+   115  1.6477e-05  1.3635e-10  3.5687e-11  0:01:10  885
+   116  1.4973e-05  1.2417e-10  3.2509e-11  0:01:07  884
+   117  1.3607e-05  1.1308e-10  2.9616e-11  0:01:06  883
+   118  1.2369e-05  1.0298e-10  2.6983e-11  0:01:04  882
+   119  1.1242e-05  9.3787e-11  2.4589e-11  0:01:03  881
+   120  1.0218e-05  8.5429e-11  2.2410e-11  0:01:02  880
+   121  9.2868e-06  7.7819e-11  2.0428e-11  0:01:02  879
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   122  8.4406e-06  7.0892e-11  1.8624e-11  0:01:01  878
+   123  7.6715e-06  6.4589e-11  1.6984e-11  0:01:00  877
+   124  6.9727e-06  5.8855e-11  1.5491e-11  0:00:59  876
+   125  6.3377e-06  5.3638e-11  1.4134e-11  0:00:57  875
+   126  5.7607e-06  4.8892e-11  1.2899e-11  0:00:57  874
+   127  5.2366e-06  4.4574e-11  1.1778e-11  0:00:57  873
+   128  4.7604e-06  4.0647e-11  1.0760e-11  0:00:55  872
+   129  4.3278e-06  3.7075e-11  9.8341e-12  0:00:53  871
+   130  3.9348e-06  3.3825e-11  8.9908e-12  0:00:54  870
+   131  3.5798e-06  3.0870e-11  8.2239e-12  0:00:55  869
+   132  3.2587e-06  2.8181e-11  7.5261e-12  0:00:54  868
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   133  2.9669e-06  2.5737e-11  6.8914e-12  0:00:54  867
+   134  2.7017e-06  2.3514e-11  6.3146e-12  0:00:53  866
+   135  2.4605e-06  2.1491e-11  5.7896e-12  0:00:53  865
+   136  2.2418e-06  1.9649e-11  5.3115e-12  0:00:52  864
+   137  2.0448e-06  1.7975e-11  4.8761e-12  0:00:52  863
+   138  1.8656e-06  1.6452e-11  4.4794e-12  0:00:52  862
+   139  1.7026e-06  1.5066e-11  4.1179e-12  0:00:52  861
+   140  1.5565e-06  1.3805e-11  3.7877e-12  0:00:51  860
+   141  1.4238e-06  1.2659e-11  3.4866e-12  0:00:52  859
+   142  1.3029e-06  1.1615e-11  3.2126e-12  0:00:52  858
+   143  1.1927e-06  1.0663e-11  2.9627e-12  0:00:53  857
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   144  1.0922e-06  9.7979e-12  2.7350e-12  0:00:52  856
+   145  1.0006e-06  9.0089e-12  2.5266e-12  0:00:53  855
+   146  9.1711e-07  8.2897e-12  2.3372e-12  0:00:53  854
+!  146 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*rollzoom")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*zoom")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-activate-item "Read Mesh Options*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/order_changes/coarse/coarse2m.cas.h5") "All Files (*)")
+
+83RPC017 is already loaded (21.1459).                       Process affinity not being set.
+
+       Clearing partially read grid.
+
+Reading from 83RPC017:"C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/order_changes/coarse/coarse2m.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+        1000 cells,     1 cell zone  ...
+           1000 quadrilateral cells,  zone id: 8
+        2110 faces,     5 face zones ...
+           1890 2D interior faces,  zone id: 9
+             10 2D velocity-inlet faces,  zone id: 10
+             10 2D pressure-outlet faces,  zone id: 11
+            100 2D wall faces,  zone id: 12
+            100 2D wall faces,  zone id: 13
+        1111 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 10/10 = 1
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottomwall
+	topwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton1(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-toggle-button2 "Read Mesh Options*Table1(Options)*ToggleBox1*Replace mesh" #t)
+(cx-gui-do cx-activate-item "Read Mesh Options*Table1(Options)*ToggleBox1*Replace mesh")
+(cx-gui-do cx-activate-item "Read Mesh Options*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "101x11.msh") "All Files (*)")
+
+Writing Settings file "C:\Users\YCHAVA~1.176\AppData\Local\Temp\2"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing fluid (type fluid) (mixture) ... Done.
+	writing int_fluid (type interior) (mixture) ... Done.
+	writing inlet (type velocity-inlet) (mixture) ... Done.
+	writing outlet (type pressure-outlet) (mixture) ... Done.
+	writing topwall (type wall) (mixture) ... Done.
+	writing bottomwall (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.
+Multicore SMT processors detected. Processor affinity set!
+Reading "C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/order_changes/coarse/101x11.msh"...
+Buffering for file scan...
+
+
+       Clearing partially read grid.
+    1111 nodes.
+    1000 quadrilateral cells, zone  8.
+    1890 2D interior faces, zone  9.
+      10 2D velocity-inlet faces, zone 10.
+      10 2D pressure-outlet faces, zone 11.
+     100 2D wall faces, zone 12.
+     100 2D wall faces, zone 13.
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 10/10 = 1
+     materials,
+     interface,
+     domains,
+     zones,
+	bottomwall
+	topwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+ Setting zone id of fluid to 8.
+ Setting zone id of int_fluid to 9.
+ Setting zone id of inlet to 10.
+ Setting zone id of outlet to 11.
+ Setting zone id of topwall to 12.
+ Setting zone id of bottomwall to 13.
+Done.
+
+Setting fluid (mixture) ... Done.
+Setting int_fluid (mixture) ... Done.
+Setting inlet (mixture) ... Done.
+Setting outlet (mixture) ... Done.
+Setting topwall (mixture) ... Done.
+Setting bottomwall (mixture) ... Done.
+
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Controls)*PushButton1(Controls)")
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table2*PushButton4(Equations)")
+(cx-gui-do cx-activate-item "Equations*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table2*PushButton6(Advanced)")
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Advanced Solution Controls*Frame1" 0)
+(cx-gui-do cx-activate-item "Advanced Solution Controls*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table2*PushButton4(Equations)")
+(cx-gui-do cx-activate-item "Equations*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList3(Momentum)" '( 0))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList3(Momentum)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton1(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+     1  0.0000e+00  1.5465e-02  0.0000e+00  0:00:26  999
+     2  1.0000e+00  9.2383e-03  1.0731e-04  0:01:28  998
+     3  1.0000e+00  5.2953e-03  1.0551e-04  0:01:20  997
+     4  9.0679e-01  3.0382e-03  7.4842e-05  0:01:12  996
+     5  6.9767e-01  1.7641e-03  4.9882e-05  0:01:08  995
+     6  5.1118e-01  1.0399e-03  3.4180e-05  0:01:03  994
+     7  3.5933e-01  6.2097e-04  2.1860e-05  0:00:59  993
+     8  2.6046e-01  3.7015e-04  1.5381e-05  0:00:57  992
+     9  1.9480e-01  2.2027e-04  1.1074e-05  0:00:54  991
+    10  1.4748e-01  1.3046e-04  7.9184e-06  0:00:53  990
+    11  1.1110e-01  7.6753e-05  5.5387e-06  0:00:53  989
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    12  8.2176e-02  4.4818e-05  3.7991e-06  0:00:52  988
+    13  6.0554e-02  2.6215e-05  2.5738e-06  0:00:51  987
+    14  4.4550e-02  1.5806e-05  1.7195e-06  0:00:51  986
+    15  3.2197e-02  9.5525e-06  1.1558e-06  0:00:49  985
+    16  2.3317e-02  5.7760e-06  7.9483e-07  0:00:47  984
+    17  1.6909e-02  3.5015e-06  5.5574e-07  0:00:47  983
+    18  1.2312e-02  2.1457e-06  3.8951e-07  0:00:46  982
+    19  8.8895e-03  1.3774e-06  2.7502e-07  0:00:46  981
+    20  6.3620e-03  9.2380e-07  1.9422e-07  0:00:46  980
+    21  4.5077e-03  6.5964e-07  1.3603e-07  0:00:46  979
+    22  3.1786e-03  4.7414e-07  9.4064e-08  0:00:46  978
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    23  2.2832e-03  3.2365e-07  6.4853e-08  0:00:47  977
+    24  1.6706e-03  2.0350e-07  4.6272e-08  0:00:48  976
+    25  1.2390e-03  1.1569e-07  3.2937e-08  0:00:46  975
+    26  9.2854e-04  6.4276e-08  2.3777e-08  0:00:48  974
+    27  6.9335e-04  3.3651e-08  1.7174e-08  0:00:46  973
+    28  5.1820e-04  2.0252e-08  1.2505e-08  0:00:45  972
+    29  3.8402e-04  1.6133e-08  9.0569e-09  0:00:45  971
+    30  2.8266e-04  1.4795e-08  6.5497e-09  0:00:45  970
+    31  2.0724e-04  1.2520e-08  4.7793e-09  0:00:47  969
+    32  1.5142e-04  1.0392e-08  3.4675e-09  0:00:46  968
+    33  1.1036e-04  8.3495e-09  2.4929e-09  0:00:45  967
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    34  8.0584e-05  6.4592e-09  1.7748e-09  0:00:44  966
+    35  5.9576e-05  4.7880e-09  1.2687e-09  0:00:44  965
+    36  4.4512e-05  3.2316e-09  9.0809e-10  0:00:43  964
+    37  3.3451e-05  2.0362e-09  6.6550e-10  0:00:43  963
+    38  2.4976e-05  1.1227e-09  4.8484e-10  0:00:43  962
+    39  1.8717e-05  6.2049e-10  3.5734e-10  0:00:43  961
+    40  1.3963e-05  3.7802e-10  2.6112e-10  0:00:42  960
+    41  1.0430e-05  3.1764e-10  1.9213e-10  0:00:42  959
+    42  7.7466e-06  2.9655e-10  1.3995e-10  0:00:43  958
+    43  5.7264e-06  2.6381e-10  1.0094e-10  0:00:43  957
+    44  4.2125e-06  2.2222e-10  7.2124e-11  0:00:43  956
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    45  3.0903e-06  1.7758e-10  5.1121e-11  0:00:43  955
+    46  2.2840e-06  1.3437e-10  3.6294e-11  0:00:43  954
+    47  1.7078e-06  8.6585e-11  2.6276e-11  0:00:44  953
+    48  1.2864e-06  5.2191e-11  1.9413e-11  0:00:44  952
+    49  9.6799e-07  2.8969e-11  1.4356e-11  0:00:42  951
+    50  7.2897e-07  1.6088e-11  1.0723e-11  0:00:43  950
+    51  5.4621e-07  9.7675e-12  7.9076e-12  0:00:44  949
+    52  4.0648e-07  1.0334e-11  5.7517e-12  0:00:45  948
+    53  3.0317e-07  8.9383e-12  4.2461e-12  0:00:46  947
+    54  2.2562e-07  7.6421e-12  3.1189e-12  0:00:46  946
+    55  1.6746e-07  6.3386e-12  2.2766e-12  0:00:45  945
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    56  1.2408e-07  5.0806e-12  1.6515e-12  0:00:44  944
+    57  9.1996e-08  3.9237e-12  1.1930e-12  0:00:44  943
+    58  6.8647e-08  2.9143e-12  8.6688e-13  0:00:44  942
+    59  5.1653e-08  2.0699e-12  6.4373e-13  0:00:44  941
+    60  3.8943e-08  1.3132e-12  4.7739e-13  0:00:44  940
+    61  2.9360e-08  7.6953e-13  3.5667e-13  0:02:12  939
+    62  2.2080e-08  4.2038e-13  2.6699e-13  0:01:58  938
+    63  1.6558e-08  2.6651e-13  1.9906e-13  0:01:42  937
+    64  1.2422e-08  2.4447e-13  1.4946e-13  0:01:30  936
+    65  9.2839e-09  2.2855e-13  1.1133e-13  0:01:21  935
+    66  6.9154e-09  2.0231e-13  8.2174e-14  0:01:13  934
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    67  5.1402e-09  1.6991e-13  6.0201e-14  0:01:06  933
+    68  3.8193e-09  1.3588e-13  4.3782e-14  0:01:01  932
+    69  2.8514e-09  1.0337e-13  3.1816e-14  0:00:57  931
+    70  2.1492e-09  7.4590e-14  2.3923e-14  0:00:54  930
+    71  1.6182e-09  4.4698e-14  1.7960e-14  0:00:52  929
+    72  1.2206e-09  2.6258e-14  1.3688e-14  0:00:51  928
+    73  9.1851e-10  1.4498e-14  1.0367e-14  0:00:50  927
+!   73 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/order_changes/first_order/poutlet.txt") "All Files (*)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-selections "Boundary Conditions*Table1*Table3*DropDownList2(Type)" '( 7))
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*Table3*DropDownList2(Type)")
+(cx-gui-do cx-activate-item "Outflow*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Outflow*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    73  9.1851e-10  1.4498e-14  1.0367e-14  0:00:54 1000
+!   73 solution is converged
+    74  1.0306e+01  3.7246e-04  2.1208e-03  0:00:52  999
+    75  6.0660e+00  2.1804e-04  1.2373e-03  0:00:50  998
+    76  2.4790e+00  1.0282e-04  5.4402e-04  0:00:54  997
+    77  1.1403e+00  5.2936e-05  2.8163e-04  0:00:52  996
+    78  5.5637e-01  2.6316e-05  1.4485e-04  0:00:51  995
+    79  2.9621e-01  1.4224e-05  7.5268e-05  0:00:49  994
+    80  1.6252e-01  7.6878e-06  3.9405e-05  0:00:48  993
+    81  9.3969e-02  4.5207e-06  2.0699e-05  0:00:47  992
+    82  5.9025e-02  3.1057e-06  1.0911e-05  0:00:47  991
+    83  3.9536e-02  2.3321e-06  5.7722e-06  0:00:46  990
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    84  2.7078e-02  1.7534e-06  3.0812e-06  0:00:47  989
+    85  1.8718e-02  1.2815e-06  1.6723e-06  0:00:46  988
+    86  1.2973e-02  9.2266e-07  9.2475e-07  0:00:46  987
+    87  9.1145e-03  5.5628e-07  5.1821e-07  0:00:47  986
+    88  6.4788e-03  3.7684e-07  2.9780e-07  0:00:46  985
+    89  4.6574e-03  2.4223e-07  1.7589e-07  0:00:45  984
+    90  3.3426e-03  1.5970e-07  1.0576e-07  0:00:44  983
+    91  2.4100e-03  1.3360e-07  6.5670e-08  0:00:47  982
+    92  1.7451e-03  1.0417e-07  4.2044e-08  0:00:49  981
+    93  1.2708e-03  7.6103e-08  2.7678e-08  0:00:47  980
+    94  9.3128e-04  5.3295e-08  1.8747e-08  0:00:48  979
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    95  6.8582e-04  3.8913e-08  1.3076e-08  0:00:46  978
+    96  5.0428e-04  2.7930e-08  9.4630e-09  0:00:47  977
+    97  3.6919e-04  1.9914e-08  6.9872e-09  0:00:46  976
+    98  2.6856e-04  1.4242e-08  5.2612e-09  0:00:46  975
+    99  1.9383e-04  1.0325e-08  3.9828e-09  0:00:45  974
+   100  1.3884e-04  7.6337e-09  3.0021e-09  0:00:44  973
+   101  9.9699e-05  5.7095e-09  2.2551e-09  0:00:44  972
+   102  7.3243e-05  4.2316e-09  1.6992e-09  0:00:45  971
+   103  5.4329e-05  3.0706e-09  1.2597e-09  0:00:46  970
+   104  4.1084e-05  2.1720e-09  9.2475e-10  0:00:45  969
+   105  3.1216e-05  1.4941e-09  6.7768e-10  0:00:44  968
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   106  2.3892e-05  1.0341e-09  4.9549e-10  0:00:43  967
+   107  1.8303e-05  7.5818e-10  3.6452e-10  0:00:44  966
+   108  1.3890e-05  6.0404e-10  2.6723e-10  0:00:42  965
+   109  1.0615e-05  5.0060e-10  2.0126e-10  0:00:41  964
+   110  8.2259e-06  4.0376e-10  1.5281e-10  0:00:42  963
+   111  6.3871e-06  3.1975e-10  1.1816e-10  0:00:41  962
+   112  4.9528e-06  2.5212e-10  9.2654e-11  0:00:41  961
+   113  3.8621e-06  1.9927e-10  7.3377e-11  0:00:41  960
+   114  3.0555e-06  1.5844e-10  5.8231e-11  0:00:41  959
+   115  2.4282e-06  1.2543e-10  4.6259e-11  0:00:41  958
+   116  1.9321e-06  1.0032e-10  3.6691e-11  0:00:40  957
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   117  1.5351e-06  8.0166e-11  2.9056e-11  0:00:39  956
+   118  1.2253e-06  6.4127e-11  2.3036e-11  0:00:39  955
+   119  9.8036e-07  5.1403e-11  1.8256e-11  0:00:39  954
+   120  7.8511e-07  4.1201e-11  1.4481e-11  0:00:40  953
+   121  6.2737e-07  3.3073e-11  1.1485e-11  0:00:39  952
+   122  4.9990e-07  2.6649e-11  9.1500e-12  0:00:41  951
+   123  3.9793e-07  2.1535e-11  7.2909e-12  0:00:41  950
+   124  3.1675e-07  1.7500e-11  5.8616e-12  0:00:40  949
+   125  2.5355e-07  1.4359e-11  4.7526e-12  0:00:40  948
+   126  2.0322e-07  1.1755e-11  3.8549e-12  0:00:39  947
+   127  1.6303e-07  9.6065e-12  3.1301e-12  0:00:40  946
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   128  1.3198e-07  7.8359e-12  2.5430e-12  0:00:41  945
+   129  1.0786e-07  6.4341e-12  2.0673e-12  0:00:42  944
+   130  8.8295e-08  5.2868e-12  1.6881e-12  0:00:42  943
+   131  7.2445e-08  4.3438e-12  1.3971e-12  0:00:41  942
+   132  5.9585e-08  3.5703e-12  1.1630e-12  0:00:41  941
+   133  4.9310e-08  2.9375e-12  9.7667e-13  0:00:41  940
+   134  4.1059e-08  2.4276e-12  8.2257e-13  0:00:41  939
+   135  3.4293e-08  2.0216e-12  6.9613e-13  0:00:40  938
+   136  2.8704e-08  1.6863e-12  5.8995e-13  0:00:41  937
+   137  2.4069e-08  1.4090e-12  5.0063e-13  0:00:40  936
+   138  2.0225e-08  1.1795e-12  4.2554e-13  0:02:11  935
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   139  1.7022e-08  9.8985e-13  3.6289e-13  0:01:54  934
+   140  1.4350e-08  8.3205e-13  3.1024e-13  0:01:39  933
+   141  1.2140e-08  7.0049e-13  2.6538e-13  0:01:27  932
+   142  1.0292e-08  5.9417e-13  2.2712e-13  0:01:20  931
+   143  8.7494e-09  5.0464e-13  1.9454e-13  0:01:12  930
+   144  7.4578e-09  4.2928e-13  1.6675e-13  0:01:05  929
+   145  6.3612e-09  3.6605e-13  1.4297e-13  0:01:00  928
+   146  5.4287e-09  3.1229e-13  1.2261e-13  0:00:55  927
+   147  4.6354e-09  2.6666e-13  1.0517e-13  0:00:52  926
+   148  3.9605e-09  2.2781e-13  9.0225e-14  0:00:49  925
+   149  3.3855e-09  1.9471e-13  7.7439e-14  0:00:47  924
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+   150  2.8952e-09  1.6649e-13  6.6478e-14  0:00:44  923
+   151  2.4770e-09  1.4248e-13  5.7068e-14  0:00:44  922
+   152  2.1199e-09  1.2221e-13  4.8994e-14  0:00:43  921
+   153  1.8149e-09  1.0483e-13  4.2064e-14  0:00:42  920
+   154  1.5544e-09  8.9923e-14  3.6114e-14  0:00:41  919
+   155  1.3317e-09  7.7141e-14  3.1006e-14  0:00:41  918
+   156  1.1412e-09  6.6194e-14  2.6623e-14  0:00:43  917
+   157  9.7856e-10  5.6806e-14  2.2859e-14  0:01:21  916
+!  157 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #f)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "outflow.txt") "All Files (*)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Monitors|Residual"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Monitors|Residual"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Monitors|Residual"))
+(cx-gui-do cx-activate-item "Residual Monitors*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "outflow.txt") "All Files (*)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  02:49:21, 06 Nov 2025 GMT Standard Time 
+Total Transcript Time: 18 Minute 48 Second.

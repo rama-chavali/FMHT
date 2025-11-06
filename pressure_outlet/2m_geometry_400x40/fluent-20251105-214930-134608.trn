@@ -1,0 +1,271 @@
+Auto-Transcript Start Time:  21:49:30, 05 Nov 2025 GMT Standard Time 
+Current Directory: "C:\Users\y.chavali.176\OneDrive - Cranfield University\fm_assignment\2m_geometry_400x40"
+
+              Welcome to ANSYS Fluent 2025 R2
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Jun 16 2025 10:46:43 EDT  Build Id: 10204  
+ 
+Connected License Server List:	1055@cclic-2.central.cranfield.ac.uk
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "83RPC017" (win64).
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID     Vendor                         
+-------------------------------------------------------------------------------
+n3    83RPC017  4/8  Windows-x64  139300  Intel(R) Core(TM) i7-7700      
+n2    83RPC017  3/8  Windows-x64  131836  Intel(R) Core(TM) i7-7700      
+n1    83RPC017  2/8  Windows-x64  134708  Intel(R) Core(TM) i7-7700      
+n0*   83RPC017  1/8  Windows-x64  138284  Intel(R) Core(TM) i7-7700      
+host  83RPC017       Windows-x64  129452  Intel(R) Core(TM) i7-7700      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\y.chavali.176\\OneDrive - Cranfield University\\fm_assignment\\2m_geometry_400x40\\cleanup-fluent-83RPC017-129452.bat
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+Fast-loading "C:\PROGRA~1\ANSYSI~1\v252\fluent\fluent25.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+83RPC017 is already loaded (35.9982).                       Process affinity not being set.
+
+Reading from 83RPC017:"C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/2m_geometry_400x40/fine2m.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+         891 cells,     1 cell zone  ...
+            891 quadrilateral cells,  zone id: 8
+        1890 faces,     5 face zones ...
+           1674 2D interior faces,  zone id: 9
+              9 2D velocity-inlet faces,  zone id: 10
+              9 2D pressure-outlet faces,  zone id: 11
+             99 2D wall faces,  zone id: 12
+             99 2D wall faces,  zone id: 13
+        1000 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 9/9 = 1
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottomwall
+	topwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+
+> (cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-toggle-button2 "Read Mesh Options*Table1(Options)*ToggleBox1*Replace mesh" #t)
+(cx-gui-do cx-activate-item "Read Mesh Options*Table1(Options)*ToggleBox1*Replace mesh")
+(cx-gui-do cx-activate-item "Read Mesh Options*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "401x41.msh") "All Mesh Files (*.msh* *.MSH* )")
+
+Writing Settings file "C:\Users\YCHAVA~1.176\AppData\Local\Temp\2"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing fluid (type fluid) (mixture) ... Done.
+	writing int_fluid (type interior) (mixture) ... Done.
+	writing inlet (type velocity-inlet) (mixture) ... Done.
+	writing outlet (type pressure-outlet) (mixture) ... Done.
+	writing topwall (type wall) (mixture) ... Done.
+	writing bottomwall (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.
+Multicore SMT processors detected. Processor affinity set!
+Reading "C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/2m_geometry_400x40/401x41.msh"...
+Buffering for file scan...
+
+
+       Clearing partially read grid.
+   16441 nodes.
+   16000 quadrilateral cells, zone  8.
+   31560 2D interior faces, zone  9.
+      40 2D velocity-inlet faces, zone 10.
+      40 2D pressure-outlet faces, zone 11.
+     400 2D wall faces, zone 12.
+     400 2D wall faces, zone 13.
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 40/45 = 0.888889
+     materials,
+     interface,
+     domains,
+     zones,
+	bottomwall
+	topwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+ Setting zone id of fluid to 8.
+ Setting zone id of int_fluid to 9.
+ Setting zone id of inlet to 10.
+ Setting zone id of outlet to 11.
+ Setting zone id of topwall to 12.
+ Setting zone id of bottomwall to 13.
+Done.
+
+Setting fluid (mixture) ... Done.
+Setting int_fluid (mixture) ... Done.
+Setting inlet (mixture) ... Done.
+Setting outlet (mixture) ... Done.
+Setting topwall (mixture) ... Done.
+Setting bottomwall (mixture) ... Done.
+
+(cx-gui-do cx-activate-item "General*Table1*ButtonBox1(Mesh)*PushButton2(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+     1  0.0000e+00  5.4633e-03  0.0000e+00  0:02:07  999
+     2  1.0000e+00  2.9196e-03  1.9356e-05  0:03:05  998
+
+ Reversed flow on 2 faces (5.0% area) of pressure-outlet 11.
+     3  1.0000e+00  1.5300e-03  2.0492e-05  0:02:57  997
+
+ Reversed flow on 4 faces (10.0% area) of pressure-outlet 11.
+     4  8.8827e-01  7.9826e-04  1.5800e-05  0:03:02  996
+
+ Reversed flow on 4 faces (10.0% area) of pressure-outlet 11.
+     5  6.0939e-01  4.2399e-04  1.0616e-05  0:02:54  995
+     6  4.3246e-01  2.3400e-04  7.3560e-06  0:02:39  994
+     7  3.9059e-01  1.3032e-04  5.8141e-06  0:02:30  993
+     8  3.2941e-01  7.0945e-05  4.0447e-06  0:02:20  992
+     9  2.4024e-01  3.7928e-05  2.6306e-06  0:02:12  991
+    10  1.4645e-01  2.1921e-05  1.5728e-06  0:02:11  990
+    11  7.5623e-02  1.3076e-05  8.9828e-07  0:02:02  989
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    12  5.2722e-02  7.7021e-06  5.7918e-07  0:01:57  988
+    13  4.0325e-02  4.2390e-06  3.9657e-07  0:01:55  987
+    14  2.5316e-02  2.6314e-06  2.4232e-07  0:01:50  986
+    15  1.3382e-02  1.7298e-06  1.6547e-07  0:01:43  985
+    16  1.1043e-02  1.1064e-06  1.1411e-07  0:01:38  984
+    17  9.3991e-03  6.2027e-07  8.6118e-08  0:01:34  983
+    18  6.4789e-03  3.6041e-07  5.5795e-08  0:01:34  982
+    19  3.5805e-03  2.6282e-07  3.2549e-08  0:01:31  981
+    20  2.0321e-03  1.8238e-07  2.5226e-08  0:01:26  980
+    21  1.7401e-03  1.0891e-07  1.8726e-08  0:01:27  979
+    22  1.2754e-03  6.0981e-08  1.2406e-08  0:01:28  978
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    23  7.3475e-04  4.6581e-08  9.9279e-09  0:01:28  977
+    24  4.3437e-04  3.4106e-08  5.7924e-09  0:01:26  976
+    25  4.0561e-04  2.0897e-08  3.9134e-09  0:01:24  975
+    26  3.1046e-04  1.0825e-08  2.6473e-09  0:01:24  974
+    27  1.9098e-04  8.3415e-09  1.5389e-09  0:01:22  973
+    28  1.0349e-04  6.5432e-09  8.2096e-10  0:01:21  972
+    29  8.1924e-05  4.2293e-09  7.0978e-10  0:01:20  971
+    30  6.5133e-05  2.1874e-09  5.5410e-10  0:01:19  970
+    31  4.2325e-05  1.6402e-09  3.4433e-10  0:01:18  969
+    32  2.3565e-05  1.3185e-09  1.7580e-10  0:01:17  968
+    33  1.8829e-05  8.7602e-10  1.6043e-10  0:01:14  967
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    34  1.5113e-05  4.5340e-10  1.3670e-10  0:01:16  966
+    35  9.9734e-06  3.0882e-10  8.9078e-11  0:01:17  965
+    36  5.8136e-06  2.6521e-10  4.6162e-11  0:01:16  964
+    37  4.0680e-06  1.8503e-10  3.0748e-11  0:01:15  963
+    38  3.2810e-06  9.8167e-11  2.6098e-11  0:01:16  962
+    39  2.2592e-06  6.2903e-11  1.7610e-11  0:01:16  961
+    40  1.3284e-06  5.3479e-11  9.2419e-12  0:01:15  960
+    41  9.0406e-07  3.8467e-11  6.7261e-12  0:01:14  959
+!   41 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera 0.0438524 -0.0108682 0)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-use-window-id 51)
+(handle-key "f11")
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-use-window-id 51)
+(handle-key "f11")
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-use-window-id 51)
+(handle-key "f11")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-selections "Boundary Conditions*Table1*List2(Zone)" '( 3))
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*List2(Zone)")
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  21:59:41, 05 Nov 2025 GMT Standard Time 
+Total Transcript Time: 10 Minute 10 Second.

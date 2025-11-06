@@ -1,0 +1,88 @@
+
+
+    format long;
+	clc;
+	clear all;
+	
+    YMAX = 20 % NUMBER OF GRID POINTS
+
+	% MATERIAL PROPERTIES OF THE WATER
+	RHO = 1000.0  	       % DENSITY OF THE FLUID
+	MU = 0.00102 	       % DYNAMIC VISCOSITY OF THE FLUID  
+	NU = MU/RHO  	       % KINEMATIC VISCOSITY OF THE FLUID
+
+	disp('Fluid density, RHO [kg/m3] = ');
+	RHO
+	disp('Dynamic viscosity MU [Pas] = ');
+	MU
+	disp('Kinematic viscosity NU [m2/s] = ')
+	NU
+
+	% DIMENSIONS OF THE COMPUTATIONAL DOMAIN
+	length = 10.0 	       % LENGTH OF THE DOMAIN [meter]
+	height = 0.3  	       % HEIGHT OF THE DOMAIN [meter]
+	width = 0.3            % WIDTH OF THE DOMAIN  [meter]
+
+	l = length	       % LENGTH OF THE CHANNEL
+	h = height	       % HEIGHT OF THE CHANNEL
+	w = width	       % WIDTH OF THE CHANNEL
+
+	disp('Length of the channel [m] = ')
+	l
+	disp('Height of the channel [m] = ')
+	h
+	disp('Width of the channel [m] = ')
+	w
+
+	% INPUT REYNOLDS NUMBER
+	Re = 52.0 		
+	%print *, 'Reynolds number = ', Re
+
+	% COMPUTE THE AVERAGE VELOCITY OF THE FLOW
+	ua = (Re*NU)/(2.0*h)
+	%print *, 'Average velocity of the flow = ', ua
+
+	% COMPUTE THE PRESSURE-DROP
+	dp = (12.0*MU*l*ua)/(h*h)
+	%print *, 'Pressure drop in the channel = ', dp
+
+	% COMPUTE THE VOLUME FLOW RATE
+	Q = (w*dp*h*h*h)/(12.0*MU*l)
+	%print *, 'Volume flow rate = ', Q
+
+	% ONE-DIMENSIONAL GRID GENERATION
+% Discretization in y (centered at y = 0)
+delY = h / (YMAX - 1);  % Grid spacing
+y_min = -h / 2;
+y_max =  h / 2;
+
+% Generate symmetric grid from -h/2 to h/2
+Y = linspace(y_min, y_max, YMAX);
+
+% Analytical velocity profile
+U = zeros(1, YMAX);
+for J = 1:YMAX
+    if J == 1 || J == YMAX
+        U(J) = 0.0;  % No-slip at the walls
+    else
+         U(J) = (dp / (2.0 * MU * l)) * ((h^2) / 4 - Y(J)^2);
+
+    end
+end
+
+    plot(Y',U')
+	
+	% WRITE THE COMPUTED ANALYTICAL VELOCITY PROFILE IN A FILE
+	%open(1,file = 'OutputProfileNS1D.dat')
+
+	%do J=1,YMAX
+	%  write (1,*) Y(J), U(J)
+ 	%end do
+
+	%close (1)
+
+	%print *, 'OUTPUT FILE IS READY!'
+
+%end program NavierStokes1DAnalyicalSolution
+
+%! END

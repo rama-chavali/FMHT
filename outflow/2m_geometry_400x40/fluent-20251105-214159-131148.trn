@@ -1,0 +1,92 @@
+Auto-Transcript Start Time:  21:41:59, 05 Nov 2025 GMT Standard Time 
+Current Directory: "C:\Users\y.chavali.176\OneDrive - Cranfield University\fm_assignment\2m_geometry_400x40"
+
+              Welcome to ANSYS Fluent 2025 R2
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Jun 16 2025 10:46:43 EDT  Build Id: 10204  
+ 
+Connected License Server List:	1055@cclic-2.central.cranfield.ac.uk
+
+*********************************************
+Info: Your license enables 4-way parallel execution.
+For faster simulations, please start the application with the appropriate parallel options.
+*********************************************
+
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "83RPC017" (win64).
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID     Vendor                         
+-------------------------------------------------------------------------------
+n0    83RPC017  1/8  Windows-x64  118664  Intel(R) Core(TM) i7-7700      
+host  83RPC017       Windows-x64  124780  Intel(R) Core(TM) i7-7700      
+
+MPI Option Selected: intel
+-------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\y.chavali.176\\OneDrive - Cranfield University\\fm_assignment\\2m_geometry_400x40\\cleanup-fluent-83RPC017-124780.bat
+
+Graphics driver currently in use: dx11
+
+
+ANSYS Product Improvement Program is enabled for your future runs!
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+Fast-loading "C:\PROGRA~1\ANSYSI~1\v252\fluent\fluent25.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from 83RPC017:"C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/2m_geometry_400x40/fine2m.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+         891 cells,     1 cell zone  ...
+            891 quadrilateral cells,  zone id: 8
+        1890 faces,     5 face zones ...
+           1674 2D interior faces,  zone id: 9
+              9 2D velocity-inlet faces,  zone id: 10
+              9 2D pressure-outlet faces,  zone id: 11
+             99 2D wall faces,  zone id: 12
+             99 2D wall faces,  zone id: 13
+        1000 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottomwall
+	topwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+
+> (cx-gui-do cx-activate-item "Color Theme Change*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "General*Table1*ButtonBox1(Mesh)*PushButton2(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera 0.123356 -0.0140753 0)
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  21:43:10, 05 Nov 2025 GMT Standard Time 
+Total Transcript Time: 1 Minute 10 Second.

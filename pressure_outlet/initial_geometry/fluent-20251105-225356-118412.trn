@@ -1,0 +1,223 @@
+Auto-Transcript Start Time:  22:53:56, 05 Nov 2025 GMT Standard Time 
+Current Directory: "C:\Users\y.chavali.176\OneDrive - Cranfield University\fm_assignment\initial_geometry"
+
+              Welcome to ANSYS Fluent 2025 R2
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Jun 16 2025 10:46:43 EDT  Build Id: 10204  
+ 
+Connected License Server List:	1055@cclic-2.central.cranfield.ac.uk
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "83RPC017" (win64).
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID     Vendor                         
+-------------------------------------------------------------------------------
+n3    83RPC017  4/8  Windows-x64  139932  Intel(R) Core(TM) i7-7700      
+n2    83RPC017  3/8  Windows-x64  136084  Intel(R) Core(TM) i7-7700      
+n1    83RPC017  2/8  Windows-x64  133732  Intel(R) Core(TM) i7-7700      
+n0*   83RPC017  1/8  Windows-x64  125188  Intel(R) Core(TM) i7-7700      
+host  83RPC017       Windows-x64  134408  Intel(R) Core(TM) i7-7700      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\y.chavali.176\\OneDrive - Cranfield University\\fm_assignment\\initial_geometry\\cleanup-fluent-83RPC017-134408.bat
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+Fast-loading "C:\PROGRA~1\ANSYSI~1\v252\fluent\fluent25.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from 83RPC017:"C:/Users/y.chavali.176/OneDrive - Cranfield University/fm_assignment/initial_geometry/initialgeometry.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+         741 cells,     1 cell zone  ...
+            741 quadrilateral cells,  zone id: 9
+        1540 faces,     5 face zones ...
+           1424 2D interior faces,  zone id: 10
+             39 2D velocity-inlet faces,  zone id: 11
+             39 2D pressure-outlet faces,  zone id: 12
+             19 2D wall faces,  zone id: 13
+             19 2D wall faces,  zone id: 14
+         800 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 10/10 = 1
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	topwall
+	bottomwall
+	outlet
+	inlet
+	int_fluid
+	fluid
+     parallel,
+Done.
+
+> (cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "General*Table1*ButtonBox1(Mesh)*PushButton2(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-selections "Boundary Conditions*Table1*List2(Zone)" '( 3))
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*List2(Zone)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-selections "Solution Initialization*Table1*DropDownList1(Compute from)" '( 1))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*DropDownList1(Compute from)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton3(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+     1  0.0000e+00  5.6656e-03  0.0000e+00  0:00:45  999
+     2  1.0000e+00  3.4898e-03  2.5458e-04  0:01:35  998
+     3  1.0000e+00  1.9744e-03  3.3324e-04  0:03:02  997
+     4  8.9526e-01  1.0579e-03  2.7038e-04  0:02:36  996
+     5  6.5303e-01  6.0715e-04  1.9533e-04  0:02:16  995
+     6  4.7425e-01  3.7026e-04  1.3177e-04  0:01:58  994
+     7  4.0033e-01  2.2407e-04  8.1955e-05  0:01:43  993
+     8  3.2755e-01  1.3530e-04  4.9169e-05  0:01:32  992
+     9  2.5349e-01  8.0132e-05  3.0663e-05  0:01:23  991
+    10  1.8446e-01  4.7087e-05  2.0372e-05  0:01:18  990
+    11  1.2712e-01  2.6959e-05  1.4180e-05  0:01:12  989
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    12  8.4574e-02  1.5242e-05  9.8109e-06  0:01:06  988
+    13  5.4753e-02  8.9641e-06  6.5750e-06  0:01:01  987
+    14  3.5593e-02  5.6685e-06  4.2589e-06  0:01:00  986
+    15  2.2830e-02  3.6038e-06  2.6873e-06  0:00:57  985
+    16  1.4614e-02  2.2426e-06  1.6747e-06  0:00:56  984
+    17  9.3901e-03  1.3771e-06  1.0413e-06  0:00:54  983
+    18  6.0947e-03  8.4322e-07  6.5208e-07  0:00:54  982
+    19  4.0311e-03  5.2301e-07  4.1279e-07  0:00:54  981
+    20  2.6676e-03  3.2978e-07  2.6370e-07  0:00:53  980
+    21  1.7619e-03  2.1031e-07  1.6901e-07  0:00:52  979
+    22  1.1694e-03  1.3506e-07  1.0889e-07  0:00:52  978
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    23  7.8234e-04  8.6850e-08  7.0518e-08  0:00:52  977
+    24  5.2581e-04  5.5701e-08  4.5809e-08  0:00:51  976
+    25  3.5483e-04  3.5696e-08  2.9783e-08  0:00:52  975
+    26  2.3997e-04  2.2913e-08  1.9341e-08  0:00:51  974
+    27  1.6248e-04  1.4763e-08  1.2541e-08  0:00:50  973
+    28  1.1009e-04  9.5623e-09  8.1391e-09  0:00:49  972
+    29  7.4605e-05  6.2209e-09  5.2854e-09  0:00:50  971
+    30  5.0599e-05  4.0630e-09  3.4355e-09  0:00:49  970
+    31  3.4374e-05  2.6598e-09  2.2408e-09  0:00:49  969
+    32  2.3393e-05  1.7459e-09  1.4662e-09  0:00:49  968
+    33  1.5947e-05  1.1460e-09  9.6242e-10  0:00:49  967
+
+  iter  continuity  x-velocity  y-velocity     time/iter
+    34  1.0870e-05  7.5018e-10  6.3404e-10  0:00:48  966
+    35  7.4103e-06  4.8982e-10  4.1987e-10  0:00:48  965
+    36  5.0502e-06  3.2007e-10  2.7898e-10  0:00:47  964
+    37  3.4410e-06  2.0916e-10  1.8574e-10  0:00:46  963
+    38  2.3453e-06  1.3681e-10  1.2388e-10  0:00:47  962
+    39  1.5991e-06  8.9711e-11  8.2890e-11  0:00:47  961
+    40  1.0906e-06  5.9176e-11  5.5523e-11  0:00:49  960
+    41  7.4422e-07  3.9196e-11  3.7136e-11  0:00:48  959
+!   41 solution is converged
+
+Calculation complete.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Surface)*PushButton1(Create)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuCreate*Line/Rake...")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry1(X)" '( 0))
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( 1))
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 2))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList2" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "outlet.txt") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "velocitydevelopement.txt") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-2"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|xy-plot-1"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  23:09:06, 05 Nov 2025 GMT Standard Time 
+Total Transcript Time: 15 Minute 9 Second.
