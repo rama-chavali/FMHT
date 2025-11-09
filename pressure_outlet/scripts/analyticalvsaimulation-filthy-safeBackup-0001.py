@@ -17,8 +17,7 @@ plt.rcParams.update({
     "axes.grid": True
 })
 plt.rcParams['mathtext.default'] = 'bf'  # Make all math/scientific text bold
-
-YMAX = 101
+YMAX = 11
 
 RHO = 1000.0
 MU = 0.00102
@@ -37,6 +36,7 @@ ua = (Re * NU) / (2 * h)
 dp = (12.0 * MU * l * ua) / (h * h)
 Q  = (w * dp * h**3) / (12.0 * MU * l)
 
+delY = h / (YMAX - 1)
 y_min = -h / 2
 y_max =  h / 2
 Y = np.linspace(y_min, y_max, YMAX)
@@ -48,27 +48,36 @@ for j in range(YMAX):
     else:
         U[j] = (dp / (2.0 * MU * l)) * ((h ** 2) / 4 - Y[j] ** 2)
 
-data1 = pd.read_csv("../coarse10mpressureoutlet/outlet.txt", sep="\s+", header=None)
-data2 = pd.read_csv("../initial_geometry/outlet.txt", sep="\s+", header=None)
+data1 = pd.read_csv("../2m_geometry_200x20/outlet.txt", sep="\s+", header=None)
+data2 = pd.read_csv("../2m_geometry_100x10/outlet.txt", sep="\s+", header=None)
+data3 = pd.read_csv("../2m_geometry_400x40/outlet.txt", sep="\s+", header=None)
+
+common_y = np.intersect1d(data1[0].to_numpy(),
+                          np.intersect1d(data2[0].to_numpy(), data3[0].to_numpy()))
+
+u1_common = data1.loc[data1[0].isin(common_y), 1].to_numpy()
+u2_common = data2.loc[data2[0].isin(common_y), 1].to_numpy()
+u3_common = data3.loc[data3[0].isin(common_y), 1].to_numpy()
 
 plt.plot(U, Y, label='Analytical')
-plt.plot(data2[1].to_numpy(), data2[0].to_numpy(), label='Initial geometry')
-plt.plot(data1[1].to_numpy(), data1[0].to_numpy(), label='Extended geometry')
+plt.plot(u2_common, common_y, color="green", label='Coarse')
+plt.plot(u1_common, common_y, color="orange", label='Moderate')
+plt.plot(u3_common, common_y, color="red", label='Fine')
 
 ax = plt.gca()
-
 ax.xaxis.set_major_formatter(ScalarFormatter(useMathText=True))
 ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
-ax.ticklabel_format(axis='x', style='sci',scilimits=(-4, 4))
+ax.ticklabel_format(axis='x', style='sci', scilimits=(-4, 4))
 ax.ticklabel_format(axis='y', style='sci', scilimits=(-1, 1))
 
-
+# Bold axis labels
 plt.xlabel('u', fontweight='bold')
 plt.ylabel('y', fontweight='bold')
 
-
+# Bold legend
 plt.legend(loc='best', handlelength=1.2, labelspacing=0.3, prop={'weight': 'bold'})
 
+# Bold tick labels and scientific notation
 for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
              ax.get_xticklabels() + ax.get_yticklabels() +
              [ax.xaxis.get_offset_text(), ax.yaxis.get_offset_text()]):
@@ -77,7 +86,7 @@ for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
 # Optional: make tick lines slightly thicker
 ax.tick_params(axis='both', width=1.2)
 
-plt.savefig("plots/initialvsincreased.eps", dpi=800)
-plt.savefig("plots/initialvsincreased.png", dpi=800)
+plt.savefig("plots/pressureoutletvsanalytical.eps", dpi=800)
+plt.savefig("plots/pressureoutletvsanalytical.png", dpi=800)
 
 plt.show()

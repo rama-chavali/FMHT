@@ -16,6 +16,7 @@ plt.rcParams.update({
     "legend.frameon": False,
     "axes.grid": True
 })
+plt.rcParams['mathtext.default'] = 'bf'
 
 YMAX = 101
 
@@ -56,11 +57,18 @@ plt.plot(data1[1].to_numpy(), data1[0].to_numpy(), label='Extended geometry')
 
 ax = plt.gca()
 ax.xaxis.set_major_formatter(ScalarFormatter(useMathText=True))
-ax.ticklabel_format(axis='x', style='sci', scilimits=(-4,-4))
+ax.ticklabel_format(axis='x', style='sci', scilimits=(-4, -4))
 
-plt.xlabel('u')
-plt.ylabel('y')
-plt.legend(loc='best', handlelength=2, labelspacing=0.3)
+plt.xlabel('u', fontweight='bold')
+plt.ylabel('y', fontweight='bold')
+plt.legend(loc='best', handlelength=2, labelspacing=0.3, prop={'weight': 'bold'})
+
+for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
+             ax.get_xticklabels() + ax.get_yticklabels() +
+             [ax.xaxis.get_offset_text(), ax.yaxis.get_offset_text()]):
+    item.set_fontweight('bold')
+
+ax.tick_params(axis='both', width=1.2)
 
 plt.savefig("plots/initialvsincreased.eps", dpi=800)
 plt.savefig("plots/initialvsincreased.png", dpi=800)
