@@ -13,6 +13,7 @@ plt.rcParams.update({
     "legend.frameon": False,
     "axes.grid": True
 })
+plt.rcParams['mathtext.default'] = 'bf'
 
 YMAX = 11
 RHO = 1000.0
@@ -41,30 +42,32 @@ data2 = pd.read_csv("../first_order/outflow.txt", sep="\s+", header=None)
 data3 = pd.read_csv("../second_order/poutlet.txt", sep="\s+", header=None)
 data4 = pd.read_csv("../second_order/outflow.txt", sep="\s+", header=None)
 
-
 fig, ax = plt.subplots(constrained_layout=True)
-#ax.plot(U, Y, label=r'Analytical')
+ax.plot(U, Y, label=r'Analytical')
 ax.plot(data1[1].to_numpy(), data1[0].to_numpy(), label=r'First Order Pressure Outlet ')
-#ax.plot(data2[1].to_numpy(), data2[0].to_numpy(), label=r'First Order Outflow')
+ax.plot(data2[1].to_numpy(), data2[0].to_numpy(), label=r'First Order Outflow')
 ax.plot(data3[1].to_numpy(), data3[0].to_numpy(), label=r'Second Order Pressure Outlet')
-#ax.plot(data4[1].to_numpy(), data4[0].to_numpy(), label=r'Second Order Outflow')
+ax.plot(data4[1].to_numpy(), data4[0].to_numpy(), label=r'Second Order Outflow')
 
-
-ax.legend()
+ax.legend(loc='best', handlelength=2, labelspacing=0.3, prop={'weight':'bold'})
 ax.grid(True)
 
-ax = plt.gca()
 ax.xaxis.set_major_formatter(ScalarFormatter(useMathText=True))
 ax.ticklabel_format(axis='x', style='sci', scilimits=(-4, -4))
-ay = plt.gca()
 ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
 ax.ticklabel_format(axis='y', style='sci', scilimits=(-1, -2))
 
-plt.xlabel('$u$', fontsize=14)
-plt.ylabel('$h$', fontsize=14)
+plt.xlabel('$u$', fontsize=14, fontweight='bold')
+plt.ylabel('$h$', fontsize=14, fontweight='bold')
+
+for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
+             ax.get_xticklabels() + ax.get_yticklabels() +
+             [ax.xaxis.get_offset_text(), ax.yaxis.get_offset_text()]):
+    item.set_fontweight('bold')
+
+ax.tick_params(axis='both', width=1.2)
 
 plt.savefig("plots/firstvssecond.eps", dpi=800)
 plt.savefig("plots/firstvssecond.png", dpi=800)
-
 
 plt.show()
