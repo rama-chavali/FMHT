@@ -1,0 +1,77 @@
+// tetin file version 1.1
+// written by ICEM CFD - version 25.2 on Mon Nov 3 16:34:17 2025
+// written by ICEM CFD - version 25.2 on Tue Nov 4 15:46:39 2025
+// written by ICEM CFD - version 25.2 on Tue Nov  4 16:38:22 2025
+
+set_triangulation_tolerance 0.001
+define_family GEOM color 16663866
+define_family INLET color 16663101
+define_family OUTLET color 3387852
+define_family TOPWALL color 10761174
+define_family BOTTOMWALL color 15414148
+define_family FLUID prism 0 hexcore 1 tetra_size 0.1 color 3403389
+
+prescribed_point 0 -0.1 0 family GEOM name pnt.00
+prescribed_point 2 -0.1 0 family GEOM name pnt.01
+prescribed_point 2 0.1 0 family GEOM name pnt.02
+prescribed_point 0 0.1 0 family GEOM name pnt.03
+prescribed_point 0 0.1 0 family GEOM name pnt.04
+prescribed_point 2 -0.1 0 family BOTTOMWALL name BOTTOMWALL.8
+prescribed_point 2 0.1 0 family BOTTOMWALL name BOTTOMWALL.9
+prescribed_point 0 0.1 0 family BOTTOMWALL name BOTTOMWALL.10
+prescribed_point 0 -0.1 0 family BOTTOMWALL name BOTTOMWALL.11
+define_curve family BOTTOMWALL tetra_size 1e+10 name crv.00 vertex1 BOTTOMWALL.11 vertex2 BOTTOMWALL.8
+bspline
+2,2,0
+0,0,1,1
+0,-0.1,0
+2,-0.1,0
+define_curve family OUTLET tetra_size 1e+10 name crv.01 vertex1 BOTTOMWALL.8 vertex2 BOTTOMWALL.9
+bspline
+2,2,0
+0,0,1,1
+2,-0.1,0
+2,0.1,0
+define_curve family TOPWALL tetra_size 1e+10 name crv.02 vertex1 BOTTOMWALL.9 vertex2 BOTTOMWALL.10
+bspline
+2,2,0
+0,0,1,1
+2,0.1,0
+0,0.1,0
+define_curve family INLET tetra_size 1e+10 name crv.04 vertex1 BOTTOMWALL.10 vertex2 BOTTOMWALL.11
+bspline
+2,2,0
+0,0,1,1
+0,0.1,0
+0,-0.1,0
+define_surface name srf.00 family BOTTOMWALL tetra_size 1e+10
+trim_surface n_loops 1
+loop n_curves 4
+coedge 3dcurve   crv.01
+polyline n_points 2
+0,0
+1,0
+coedge 3dcurve   crv.02
+polyline n_points 2
+1,0
+1,1
+coedge 3dcurve   crv.04
+polyline n_points 2
+1,1
+0,1
+coedge 3dcurve   crv.00
+polyline n_points 2
+0,1
+0,0
+bspline
+2,2,2,2,0
+0,0,1,1
+0,0,1,1
+2,-0.1,0
+2,0.1,0
+0,-0.1,0
+0,0.1,0
+affix 0
+define_model 1e+10 reference_size 1
+define_prism_meshing_parameters law 0 nlay 3 hratio 1.2 min_quality 0.01 fillet 0.1 tetra_smooth_limit 0.3
+return

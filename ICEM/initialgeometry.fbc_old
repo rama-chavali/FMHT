@@ -1,0 +1,18 @@
+# family_boco file written by ICEM CFD by y.chavali.176 on Sun Nov 02 23:28:00 GMT Standard Time 2025
+## solver Ansys Fluent
+"GEOM"
+"GEOM" "color" 16663866
+"INLET"
+"INLET" "VELI" 0
+"INLET" "color" 16663866
+"OUTLET"
+"OUTLET" "PRESO" 0
+"OUTLET" "color" 16663866
+"BOTTOMWALL"
+"BOTTOMWALL" "WALL" 0
+"BOTTOMWALL" "color" 16663866
+"TOPWALL"
+"TOPWALL" "WALL" 0
+"TOPWALL" "color" 16663866
+"FLUID"
+"FLUID" "color" 12109107

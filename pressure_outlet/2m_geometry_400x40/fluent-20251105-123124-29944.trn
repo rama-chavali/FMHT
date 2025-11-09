@@ -19455,3 +19455,28 @@ Operation stopped.
 (cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
 (cx-use-window-id 51)
 (dolly-camera 0.845011 -0.16957 0)
+ Error in the fluent (fl) process : ended abnormally
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 30904 RUNNING AT 37PCL035
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 29948 RUNNING AT 37PCL035
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 50932 RUNNING AT 37PCL035
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 18156 RUNNING AT 37PCL035
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================

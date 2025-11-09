@@ -1,0 +1,135 @@
+\documentclass[12pt, a4paper, oneside]{report}
+
+%==================== Encoding and Fonts ====================
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{datetime}
+
+%==================== Math and Graphics =====================
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+
+%==================== Spacing and Layout ====================
+\usepackage{setspace}
+\setstretch{1.15}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\raggedbottom
+
+%==================== Tables and Listings ===================
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{geoStyle}{
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  frame=none,
+  captionpos=b,
+  morekeywords={Point, Line, Surface, Plane, Transfinite, Physical, Mesh, Extrude, Recombine},
+  keywordstyle=\color{purple}\bfseries,
+  commentstyle=\color{gray!60}\itshape,
+  stringstyle=\color{red},
+  comment=[l]{//}
+}
+\lstset{style=geoStyle}
+
+\usepackage{algorithm}
+\newcommand{\codealgorithm}[2]{%
+  \begin{algorithm}[H]
+    \caption{#1}
+    \vspace{-1ex}
+    \noindent\rule{\textwidth}{0.4pt}
+    \lstinputlisting[style=geoStyle]{#2}
+    \noindent\rule{\textwidth}{0.4pt}
+  \end{algorithm}
+}
+
+%==================== Numbered Chapters Without "Chapter" Word ====================
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\bfseries\Large}{\thechapter.\ }{0pt}{}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%==================== Header and Footer =====================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{1pt}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%==================== Hyperlinks ============================
+\usepackage[hidelinks]{hyperref}
+
+%==================== Bibliography ==========================
+\usepackage[square, numbers]{natbib}
+\bibliographystyle{apalike}
+\renewcommand{\bibname}{References}
+
+%==================== Other Packages ========================
+\usepackage{comment}
+\usepackage{acronym}
+\usepackage{cleveref}
+\usepackage{emptypage}
+\usepackage[nottoc]{tocbibind}
+\usepackage{makecell}
+
+%==================== Include Chapters ======================
+\includeonly{
+  title,
+  abstract,
+  Abbreviations,
+  symbols,
+  chapter1,
+  chapter2,
+  chapter3,
+  chapter4,
+  chapter5,
+  chapter6
+}
+
+%============================================================
+\begin{document}
+
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\include{title}
+\include{abstract}
+\include{Abbreviations}
+\include{symbols}
+
+\pagestyle{fancy}
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+\cleardoublepage
+
+\pagenumbering{arabic}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+
+\bibliography{references}
+
+\end{document}

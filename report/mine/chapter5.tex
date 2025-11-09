@@ -1,0 +1,357 @@
+\chapter{Results and discussion}
+\section{Grid independence}
+% For validating the results temporal grid convergence and spatial grid independence studies have been done. Generally the convergence criterion for many problems is the convergence of sensitive properties or residuals of Energy and continuity equations however they require long time integration in the case of shocks. This long time integration will take higher computational time. To reduce such computational costs converge of centreline separation bubble is introduced. This criterion is now generally used for SWBLI cases.\\ 
+% \begin{figure}[h] % H forces the figure to stay here
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{./plot/skin_length.eps} % Adjust width and filename
+% 	\caption{Temporal grid convergence}
+% 	\label{fig:convergence}
+% \end{figure}\\
+% In swept ramp case the $714 \times 175 \times 350$ has chosen as the base grid and ran for 20000 non-dimensional time units with a time step $\Delta t =0.01$. The convergence was attained around 10000 time but to make sure it was ran for higher time within 10000 to 20000 and converged to a value of $L_s=110.52$ as shown in \cref{fig:convergence}
+% 
+% \begin{table}
+% 	\centering
+% 	\begin{tabular}{|c|c|c|c|} % 4 columns with vertical borders
+% 		\hline
+% 		\textbf{Grid size} & \makecell{\textbf{\( dy \)} \\ (near bottom wall)} & \makecell{\textbf{\( dz \)} \\ (near side walls)} & \makecell{\textbf{Separation length} \\ (\( L_s \))} \\  
+% 		\hline
+% 		$714 \times 175 \times 350$
+% 		& 0.0452 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 210 \times 350$  & 0.0416 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$714 \times 240 \times 420$ & 0.0423 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$930 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.849 \\  
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Grid sizes and the first grid point distance from side and bottom walls }
+% 	\label{tab:midlinesep}
+% \end{table}
+% 
+% \begin{figure}
+% \centering
+% % First subfigure
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./plot/cfonx.png}
+% 		\caption{Skin friction along $x$ on the midline}
+% 		\label{fig:cfonx}
+% 	\end{subfigure}
+% 	\hfill
+% 	% Second subfigure
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./plot/pressuregridi.eps}
+% 		\caption{Pressure distribution on the midline}
+% 		\label{fig:ponx}
+% 	\end{subfigure}
+% 	
+% 	\caption{Comparison of skin friction and pressure along the midline for different grids}
+% 	\label{fig:cfandponx}
+% \end{figure}
+% \begin{table}
+% 	\centering
+% 	\begin{tabular}{|c|c|c|c|}
+% 		\hline
+% 		\textbf{Grid } & \textbf{Size in million} &\makecell{\textbf{Computational time} \\ (non-dimensional time units)} & \textbf{Run time} \\
+% 		\hline
+% 		$714 \times 175 \times 350$  &    43.7         & 20000                & 14 days           \\
+% 		\hline
+% 		$714 \times 210 \times 350$   &    52.4       & 30000                 & 16 days          \\
+% 		\hline
+% 		$714 \times 175 \times 420$    &    52.4       & 20800                     & 12 days          \\
+% 		\hline
+% 		$714 \times 240 \times 420$    &     71.9    &  20800                   &    10 days       \\
+% 		\hline
+% 		$930 \times 175 \times 420$     &    68.3    &  20000                    &    12 days      \\
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Computational and run time for all the grids}
+% 	\label{tab:mesh_performance}
+% \end{table}
+% Investigation of grid independence is done with 4 different sized grids apart from the base grid, the nodes of these grids are increased by 30\%. These grid points were stretched such that they capture changes near wall with higher accuracy. For capturing this, distance of the first point from the walls shouldn't be less than $0.04$ such that there are no errors. These grids are stretched with very minimal changes in $dy$ and $dz$ and the separation length hasn't varied more than 1\%. The negative skin friction region of all the grids can be seen in the  \cref{fig:cfonx} . The grid independence of these grids if further ensured by plotting $C_f$ and evaluation the separation length at various locations from 10 to 90\% of the domain this can be seen \cref{fig:grid_independence}. It is shown that at different locations the separation length  and co-efficient fo skin friction is converged throughout the domain.The total run time for different grids is given in the \cref{tab:mesh_performance}
+% \begin{figure}[htbp]
+% 	\centering
+% 	% Row 1
+% 	\subfloat[10\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_10per.eps}
+% 	}
+% 	\subfloat[20\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_20per.eps}
+% 	}
+% 	
+% 	% Row 2
+% 	\subfloat[30\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_30per.eps}
+% 	}
+% 	\subfloat[40\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_40per.eps}
+% 	}
+% 	
+% 	% Row 3
+% 	\subfloat[60\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_60per.eps}
+% 	}
+% 	\subfloat[70\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_70per.eps}
+% 	}
+% 	
+% 	% Row 4
+% 	\subfloat[80\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_80per.eps}
+% 	}
+% 	\subfloat[90\% of domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/cf_locat_90per.eps}
+% 	}
+% 	
+% 	\caption{Spatial grid independence of various grids at various locations within the domain.}
+% 	\label{fig:grid_independence}
+% \end{figure}
+% 
+% 
+% 
+% \begin{table}
+% 	\centering
+% 	\renewcommand{\arraystretch}{1.2}
+% 	\begin{tabular}{|c|l|c|c|}
+% 		\hline
+% 		\textbf{Location (\%)} & \textbf{Grid size} & \textbf{Separation length ($L_s$)} & \textbf{Index} \\
+% 		\hline
+% 		10 & $714\times175\times350$ & $\mathtt{69.21639118}$ & 89 \\
+% 		& $714\times210\times350$ & $\mathtt{69.63184865}$ & 89 \\
+% 		& $714\times175\times420$ & $\mathtt{69.21633959}$ & 102 \\
+% 		& $714\times240\times420$ & $\mathtt{69.21633959}$ & 102 \\
+% 		& $930\times175\times420$ & $\mathtt{69.27631937}$ & 102 \\
+% 		\hline
+% 		20 & $714\times175\times350$ & $\mathtt{83.76707101}$ & 120 \\
+% 		& $714\times210\times350$ & $\mathtt{83.76707101}$ & 120 \\
+% 		& $714\times175\times420$ & $\mathtt{83.76666160}$ & 140 \\
+% 		& $714\times240\times420$ & $\mathtt{83.76666160}$ & 140 \\
+% 		& $930\times175\times420$ & $\mathtt{83.22068916}$ & 140 \\
+% 		\hline
+% 		30 & $714\times175\times350$ & $\mathtt{95.12049149}$ & 141 \\
+% 		& $714\times210\times350$ & $\mathtt{95.12049149}$ & 141 \\
+% 		& $714\times175\times420$ & $\mathtt{94.50779528}$ & 167 \\
+% 		& $714\times240\times420$ & $\mathtt{95.12047222}$ & 167 \\
+% 		& $930\times175\times420$ & $\mathtt{94.49267897}$ & 167 \\
+% 		\hline
+% 		40 & $714\times175\times350$ & $\mathtt{104.45408578}$ & 158 \\
+% 		& $714\times210\times350$ & $\mathtt{104.45408578}$ & 158 \\
+% 		& $714\times175\times420$ & $\mathtt{104.45386167}$ & 189 \\
+% 		& $714\times240\times420$ & $\mathtt{104.45386167}$ & 189 \\
+% 		& $930\times175\times420$ & $\mathtt{104.39791369}$ & 189 \\
+% 		\hline
+% 		60 & $714\times175\times350$ & $\mathtt{115.37251094}$ & 191 \\
+% 		& $714\times210\times350$ & $\mathtt{115.37251094}$ & 191 \\
+% 		& $714\times175\times420$ & $\mathtt{115.37304262}$ & 230 \\
+% 		& $714\times240\times420$ & $\mathtt{115.37304262}$ & 230 \\
+% 		& $930\times175\times420$ & $\mathtt{115.18139381}$ & 230 \\
+% 		\hline
+% 		70 & $714\times175\times350$ & $\mathtt{112.63592741}$ & 208 \\
+% 		& $714\times210\times350$ & $\mathtt{112.63592741}$ & 208 \\
+% 		& $714\times175\times420$ & $\mathtt{112.63578010}$ & 252 \\
+% 		& $714\times240\times420$ & $\mathtt{112.63578010}$ & 252 \\
+% 		& $930\times175\times420$ & $\mathtt{112.64508168}$ & 252 \\
+% 		\hline
+% 		80 & $714\times175\times350$ & $\mathtt{100.83698327}$ & 229 \\
+% 		& $714\times210\times350$ & $\mathtt{100.83698327}$ & 229 \\
+% 		& $714\times175\times420$ & $\mathtt{100.83716997}$ & 279 \\
+% 		& $714\times240\times420$ & $\mathtt{100.83716997}$ & 279 \\
+% 		& $930\times175\times420$ & $\mathtt{100.42726343}$ & 279 \\
+% 		\hline
+% 		90 & $714\times175\times350$ & $\mathtt{91.11263418}$ & 260 \\
+% 		& $714\times210\times350$ & $\mathtt{91.11263418}$ & 260 \\
+% 		& $714\times175\times420$ & $\mathtt{91.11266211}$ & 317 \\
+% 		& $714\times240\times420$ & $\mathtt{90.64050894}$ & 317 \\
+% 		& $930\times175\times420$ & $\mathtt{91.07941822}$ & 317 \\
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Separation lengths and indices for various grid sizes across different span-wise locations.}
+% \end{table}
+% 
+% 
+% \clearpage
+% \section{Flow analysis and comparisons}
+% \begin{figure}[h] % H forces the figure to stay here
+% 	\centering
+% 	\includegraphics[width=\textwidth]{./contours/bottomwall.pdf} % Adjust width and filename
+% 	\caption{Streamlines and pressure contour on the bottom wall}
+% 	\label{fig:streamlines}
+% \end{figure}
+% \noindent The inlet boundary layer $Re_{\delta}=950$ is used at the inlet and the \cref{fig:streamlines} shows the fully developed flow field with streamlines superimposed on the pressure contours. Downstream the pressure has continuously increased by 0.08 units. The upstream streamlines indicate the reversed flow within the separation bubble caused by adverse pressure gradient. The separation of flow occurs along the curve that is intersecting both the upstream and downstream streamlines at upstream of the separation bubble. Further it reattaches at downstream of the separation bubble. 
+% 
+% \Cref{fig:streamlines} also shows the asymmetry of the flow that is caused by the sweep of ramp, and the foci that are seen in the reference \cite{raja} are moved towards the walls. The saddle point before ramp has remained the same; however, it has displaced from the centreline along span-wise direction and is closer to the swept ramp. The saddle points S1 and S2 have displaced compared to the symmetric case. The saddle point S1 has moved closer to the inflow as ramp is introduced earlier at $z=0$. The flow near saddle point S2 is corrupted to form a saddle-node combination.  The penetration of separation length at the centre and near the walls has reduced. The symmetry boundary condition have affected the separation length at the centreline in \cite{raja}, which caused the higher penetration along stream-wise direction. However, when compared with Lusher \cite{Lusher_Sandham_2020}, the bubble is enclosed and asymmetric. There are no fully developed foci regions are formed they were immersed with the incoming boundary layer that increased th separation length near walls. 
+% 
+% \begin{figure}[h]
+% 	\centering
+% 	\begin{subfigure}[b]{0.53\textwidth} % Half width with margin
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./contours/backwall.png}
+% 		\caption{Pressure contour at $z=0$}
+% 		\label{fig:shockwave_results_1}
+% 	\end{subfigure}
+% 	\hfill
+% 	\begin{subfigure}[b]{0.45\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./contours/frontwall.png}
+% 		\caption{ Pressure contour at $z=115$}
+% 		\label{fig:shockwave_results_2}
+% 	\end{subfigure}
+% 	\caption{Comparison of sidewall pressure contours at different $z$ values.}
+% 	\label{fig:shockwave_comparison}
+% \end{figure}
+% \noindent The separation of flow prior to the ramp is clearly visible in the \cref{fig:shockwave_comparison} the streamlines are superimposed onto the pressure contours. Pressures at inlet have shown similarities till the affect of compression waves. The separation of the flow is interpreted by the streamlines diverging from the flow field. Streamline separation points are different at 
+% \begin{figure}
+% 	\centering
+% 	\begin{subfigure}[b]{\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./contours/negativecf.png}
+% 		\caption{Negative $C_f$ region on the plane $j=1$ }
+% 		\label{fig:negativecf}
+% 	\end{subfigure}
+% 	\hfill
+% 	\begin{subfigure}[b]{\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{./contours/new.png}
+% 		\caption{Gradients of density \( \log_{10}(\nabla \rho)^2 \) representing compression waves}
+% 		\label{fig:compressionwaves}
+% 	\end{subfigure}
+% 	\caption{Visualization of surface friction and isocontours of shock structures.}
+% 	\label{fig:combined_figure}
+% \end{figure}
+% \noindent This curve is asymmetric along the ramp and co efficient of skin friction that is show in \cref{fig:negativecf} is increased along the ramp and further decreased. It is certain that the Length of maximum separation is affected by the angle of sweep. The Length of maximum separation is found at 67.94 of the domain and its $L_s=115.38$, it has moved  with an offset of 10.44 units away from the centreline along span-wise direction. Length of separation is increased by 3.3\% compare to centreline separation of swept ramp configuration. For $3^\circ$  at Mach 2 the maximum separation is displaced by $\sim$10\%  of z axis. Further the length of separation decreased and the separation lengths prior to centreline are less in magnitude compared to the separation length after the centreline. This variation of separation length is visible in the \cref{fig:negativecf}.
+% 
+% \noindent \Cref{fig:compressionwaves} shows the series of compression waves that started at 140 units from the beginning of the domain and are formed in front of the separation bubble. These compression waves increase the density and pressure within the fluid by reducing the kinetic energy of the fluid. It is evident that the ramp angle $\theta$ used is not enough to form a strong shock. These compression waves slowly compress the fluid within the region. 
+% 
+% In \cref{fig:cf_pressure_comparison} the co-efficient of skin friction along stream-wise was plotted on the mid-plane of z on the bottom wall. The symmetry and 2D values previously discussed in \citep{raja} this plot shows the less separation bubble region and with steeper change in velocity however, the maximum absolute shear stress induced by is higher in the symmetric case. The 2D case is compared to show the difference between end wall effects and end walls with swept ramp. 2D case's energy recovery post attachment is similar to the symmetry case but in swept configuration, the energy is $\sim$ 3 times higher. The symmetry and swept cases have shown similar pressure rises.  
+% 
+% \begin{figure}[htbp]
+% 	\centering
+% 	\subfloat[$C_f$ comparison on centreline at mid-plane $z$]{
+% 		\includegraphics[width=0.48\textwidth]{./plot/cf_comparison_all_cases.eps}
+% 		\label{fig:cfmid}
+% 	}
+% 	\hfill
+% 	\subfloat[Pressure comparison on centreline at mid-plane $z$]{
+% 		\includegraphics[width=0.48\textwidth]{./plot/pressure_comparisonsym.eps}
+% 	}
+% 	\caption{Comparison of $C_f$ and pressure distribution along the centreline on the mid-plane of $z$ for a swept ramp with symmetric geometry and 2D case .}
+% 	\label{fig:cf_pressure_comparison}
+% \end{figure}
+% In \Cref{fig:grid_comparison}, a comparison of $C_f$ from walls to the symmetric plane is done by selecting two planes at a time in which one is taken along the span-wise direction and the other with counter span-wise direction on the bottom wall. These planes were compared with the symmetric case. In the symmetric case the secondary hump can be seen in  \cref{fig:10}, \cref{fig:20}, \cref{fig:80}and \cref{fig:90}. These are the region of foci where the Owl-like separation of the first kind occurs in \cite{raja} but in the case of swept configuration no such humps are seen. Except for the midline shown in \cref{fig:cfmid} all other planes have shown that the maximum absolute shear stresses in the vortex region induced by the swept ramp are high. The effect of sweep is dominant near end walls however the lines closer to the symmetric plane show similar $C_f$ trends with a minimal increase in absolute induced shear stresses in the recirculation region as the ramp progressed.   
+% \begin{figure}
+% 	\centering
+% 	
+% 	\subfloat[at 10\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_10per.eps}
+% 		\label{fig:10}
+% 	}
+% 	\subfloat[at 90\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_90per.eps}
+% 		\label{fig:90}
+% 	}
+% 	
+% 	\subfloat[at 20\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_20per.eps}
+% 		\label{fig:20}
+% 	}
+% 	\subfloat[at 80\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_80per.eps}
+% 		\label{fig:80}
+% 	}
+% 	
+% 	\subfloat[at 30\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_30per.eps}
+% 		\label{fig:30}
+% 	}
+% 	\subfloat[at 70\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_70per.eps}
+% 	For validating the results temporal grid convergence and spatial grid independence studies have been done. Generally the convergence criterion for many problems is the convergence of sensitive properties or residuals of Energy and continuity equations however they require long time integration in the case of shocks. This long time integration will take higher computational time. To reduce such computational costs converge of centreline separation bubble is introduced. This criterion is now generally used for SWBLI cases.\\ 
+% \begin{figure}[h] % H forces the figure to stay here
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{./plot/skin_length.eps} % Adjust width and filename
+% 	\caption{Temporal grid convergence}
+% 	\label{fig:convergence}
+% \end{figure}\\
+% In swept ramp case the $714 \times 175 \times 350$ has chosen as the base grid and ran for 20000 non-dimensional time units with a time step $\Delta t =0.01$. The convergence was attained around 10000 time but to make sure it was ran for higher time within 10000 to 20000 and converged to a value of $L_s=110.52$ as shown in \cref{fig:convergence}
+% 
+% \begin{table}
+% 	\centering
+% 	\begin{tabular}{|c|c|c|c|} % 4 columns with vertical borders
+% 		\hline
+% 		\textbf{Grid size} & \makecell{\textbf{\( dy \)} \\ (near bottom wall)} & \makecell{\textbf{\( dz \)} \\ (near side walls)} & \makecell{\textbf{Separation length} \\ (\( L_s \))} \\  
+% 		\hline
+% 		$714 \times 175 \times 350$
+% 		& 0.0452 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 210 \times 350$  & 0.0416 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$714 \times 240 \times 420$ & 0.0423 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$930 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.849 \\  
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Grid sizes and the first grid point distance from side and bottom walls }
+% 	\label{tab:midlinesep}
+% \end{table}
+% 
+% \begin{figure}
+% \centering
+% % First subfigure	\label{fig:70}
+% 	}
+% 	
+% 	For validating the results temporal grid convergence and spatial grid independence studies have been done. Generally the convergence criterion for many problems is the convergence of sensitive properties or residuals of Energy and continuity equations however they require long time integration in the case of shocks. This long time integration will take higher computational time. To reduce such computational costs converge of centreline separation bubble is introduced. This criterion is now generally used for SWBLI cases.\\ 
+% \begin{figure}[h] % H forces the figure to stay here
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{./plot/skin_length.eps} % Adjust width and filename
+% 	\caption{Temporal grid convergence}
+% 	\label{fig:convergence}
+% \end{figure}\\
+% In swept ramp case the $714 \times 175 \times 350$ has chosen as the base grid and ran for 20000 non-dimensional time units with a time step $\Delta t =0.01$. The convergence was attained around 10000 time but to make sure it was ran for higher time within 10000 to 20000 and converged to a value of $L_s=110.52$ as shown in \cref{fig:convergence}
+% 
+% \begin{table}
+% 	\centering
+% 	\begin{tabular}{|c|c|c|c|} % 4 columns with vertical borders
+% 		\hline
+% 		\textbf{Grid size} & \makecell{\textbf{\( dy \)} \\ (near bottom wall)} & \makecell{\textbf{\( dz \)} \\ (near side walls)} & \makecell{\textbf{Separation length} \\ (\( L_s \))} \\  
+% 		\hline
+% 		$714 \times 175 \times 350$
+% 		& 0.0452 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 210 \times 350$  & 0.0416 & 0.0401 & 111.688 \\  
+% 		\hline
+% 		$714 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$714 \times 240 \times 420$ & 0.0423 & 0.0403 & 111.689 \\  
+% 		\hline
+% 		$930 \times 175 \times 420$ & 0.0452 & 0.0403 & 111.849 \\  
+% 		\hline
+% 	\end{tabular}
+% 	\caption{Grid sizes and the first grid point distance from side and bottom walls }
+% 	\label{tab:midlinesep}
+% \end{table}
+% 
+% \begin{figure}
+% \centering
+% % First subfigure\subfloat[at 40\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_40per.eps}
+% 		\label{fig:40}
+% 	}
+% 	\subfloat[at 60\% of the domain]{
+% 		\includegraphics[width=0.45\textwidth]{./plot/sweptvsymat_60per.eps}
+% 		\label{fig:60}
+% 	}
+% 	
+% 	\vspace{0.5cm}
+% 	
+% 	\caption{Comparison of $C_f$ between swept and symmetric configurations at various locations within the domain .}
+% 	\label{fig:grid_comparison}
+% \end{figure}
+% 
+
+

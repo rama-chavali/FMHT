@@ -1,0 +1,76 @@
+# Written by ICEM CFD 25.2, user y.chavali.176, Sun Nov 02 22:40:34 GMT Standard Time 2025
+
+begin family GEOM
+    begin solver "Ansys Fluent"
+        begin bctype color
+            active 1
+            color 16663900 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family GEOM
+
+begin family INLET
+    begin solver "Ansys Fluent"
+        begin bctype VELI
+            active 1
+            arg1 0 1
+        end bctype VELI
+        begin bctype color
+            active 1
+            color 16663900 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family INLET
+
+begin family OUTLET
+    begin solver "Ansys Fluent"
+        begin bctype PRESO
+            active 1
+            arg1 0 1
+        end bctype PRESO
+        begin bctype color
+            active 1
+            color 16663900 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family OUTLET
+
+begin family BOTTOMWALL
+    begin solver "Ansys Fluent"
+        begin bctype WALL
+            active 1
+            arg1 0 1
+        end bctype WALL
+        begin bctype color
+            active 1
+            color 16663900 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family BOTTOMWALL
+
+begin family TOPWALL
+    begin solver "Ansys Fluent"
+        begin bctype WALL
+            active 1
+            arg1 0 1
+        end bctype WALL
+        begin bctype color
+            active 1
+            color 16663900 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family TOPWALL
+
+begin family FLUID
+    begin solver "Ansys Fluent"
+        begin bctype color
+            active 1
+            color 12109100 1
+        end bctype color
+    end solver "Ansys Fluent"
+end family FLUID
+
+begin family VORFN
+    begin solver "Ansys Fluent"
+    end solver "Ansys Fluent"
+end family VORFN

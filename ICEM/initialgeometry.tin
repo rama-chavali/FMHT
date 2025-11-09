@@ -1,0 +1,75 @@
+// tetin file version 1.1
+// written by ICEM CFD - version 25.2 on Sun Nov  2 23:28:00 2025
+
+set_triangulation_tolerance 0.001
+# In ICEM CFD 4.2 the family_boco file is no longer tied to tetin
+# read_family_boco family_boco
+define_family GEOM color 16663866
+define_family INLET color 16663101
+define_family OUTLET color 3387852
+define_family BOTTOMWALL color 15414148
+define_family TOPWALL color 10761174
+define_family FLUID prism 0 hexcore 1 tetra_size 0.05 color 12109107
+
+prescribed_point 0 -0.1 0 family GEOM name pnt.13
+prescribed_point 0.1 -0.1 0 family GEOM name pnt.14
+prescribed_point 0.1 0.1 0 family GEOM name pnt.15
+prescribed_point 0 0.1 0 family GEOM name pnt.16
+prescribed_point 0.1 -0.1 0 family GEOM name GEOM.24
+prescribed_point 0.1 0.1 0 family GEOM name GEOM.25
+prescribed_point 0 0.1 0 family GEOM name GEOM.26
+prescribed_point 0 -0.1 0 family GEOM name GEOM.27
+define_curve family BOTTOMWALL tetra_size 1e+10 name crv.08 vertex1 GEOM.27 vertex2 GEOM.24
+bspline
+2,2,0
+0,0,1,1
+0,-0.1,0
+0.1,-0.1,0
+define_curve family OUTLET tetra_size 1e+10 name crv.09 vertex1 GEOM.24 vertex2 GEOM.25
+bspline
+2,2,0
+0,0,1,1
+0.1,-0.1,0
+0.1,0.1,0
+define_curve family TOPWALL tetra_size 1e+10 name crv.10 vertex1 GEOM.25 vertex2 GEOM.26
+bspline
+2,2,0
+0,0,1,1
+0.1,0.1,0
+0,0.1,0
+define_curve family INLET tetra_size 1e+10 name crv.11 vertex1 GEOM.26 vertex2 GEOM.27
+bspline
+2,2,0
+0,0,1,1
+0,0.1,0
+0,-0.1,0
+define_surface name srf.02 family GEOM tetra_size 1e+10
+trim_surface n_loops 1
+loop n_curves 4
+coedge 3dcurve   crv.09
+polyline n_points 2
+0,0
+1,0
+coedge 3dcurve   crv.10
+polyline n_points 2
+1,0
+1,1
+coedge 3dcurve   crv.11
+polyline n_points 2
+1,1
+0,1
+coedge 3dcurve   crv.08
+polyline n_points 2
+0,1
+0,0
+bspline
+2,2,2,2,0
+0,0,1,1
+0,0,1,1
+0.1,-0.1,0
+0.1,0.1,0
+0,-0.1,0
+0,0.1,0
+affix 0
+define_model 1e+10 reference_size 1
+return

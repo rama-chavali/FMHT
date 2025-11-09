@@ -1,0 +1,239 @@
+\chapter{Governing equations and numerical discretization}
+\section{Analytical Solution for Fully-Developed Laminar Flow in a Circular Tube}
+
+\subsection{Governing Equations}
+
+The two-dimensional incompressible Navier--Stokes equations in cylindrical coordinates $(r,z)$ for axisymmetric flow are:
+
+\textbf{Continuity:}
+\begin{equation}
+\frac{1}{r}\frac{\partial}{\partial r}(r v_r) + \frac{\partial v_z}{\partial z} = 0.
+\label{eq:continuity_full}
+\end{equation}
+
+\textbf{Momentum (radial):}
+\begin{equation}
+\rho\left( v_r\frac{\partial v_r}{\partial r} + v_z\frac{\partial v_r}{\partial z} \right)
+= -\frac{\partial p}{\partial r}
++ \mu\left[\frac{\partial}{\partial r}\left(\frac{\partial v_r}{\partial r}\right)
++ \frac{1}{r}\frac{\partial v_r}{\partial r}
+- \frac{v_r}{r^2}
++ \frac{\partial^2 v_r}{\partial z^2}\right].
+\label{eq:radial_full}
+\end{equation}
+
+\textbf{Momentum (axial):}
+\begin{equation}
+\rho\left( v_r\frac{\partial v_z}{\partial r} + v_z\frac{\partial v_z}{\partial z} \right)
+= -\frac{\partial p}{\partial z}
++ \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial v_z}{\partial r}\right)
++ \frac{\partial^2 v_z}{\partial z^2}\right].
+\label{eq:axial_full}
+\end{equation}
+
+\subsection{Assumptions}
+
+For steady, fully-developed, incompressible laminar flow in a horizontal circular tube:
+
+\begin{enumerate}
+\item Steady flow: \(\frac{\partial}{\partial t}=0\).
+\item Fully-developed: \(\frac{\partial v_z}{\partial z}=0\) and \(v_r = 0\).
+\item Axisymmetric flow: \(\frac{\partial}{\partial \theta} = 0\).
+\item No-slip at the wall: \(v_z(R)=0\).
+\item Gravity acts perpendicular to flow, thus does not appear in \(z\)-momentum.
+\end{enumerate}
+
+\subsection{Reduction of the Governing Equations}
+
+With \(v_r = 0\), continuity (\ref{eq:continuity_full}) gives:
+\begin{equation}
+\frac{\partial v_z}{\partial z} = 0 \quad \Rightarrow \quad v_z = v_z(r).
+\label{eq:velocity_only_r}
+\end{equation}
+
+The radial momentum equation (\ref{eq:radial_full}) becomes:
+\begin{equation}
+0 = -\frac{\partial p}{\partial r},
+\label{eq:radial_simplified}
+\end{equation}
+so the pressure depends only on $z$:
+\begin{equation}
+p = p(z).
+\label{eq:pz}
+\end{equation}
+
+The axial momentum equation (\ref{eq:axial_full}) simplifies to:
+\begin{equation}
+\frac{1}{r}\frac{d}{dr}\left(r\frac{dv_z}{dr}\right) = \frac{1}{\mu}\frac{dp}{dz}.
+\label{eq:axial_reduced}
+\end{equation}
+
+\subsection{Velocity Distribution}
+
+Integrating (\ref{eq:axial_reduced}):
+\begin{equation}
+\frac{dv_z}{dr} = \frac{1}{2\mu}\frac{dp}{dz}r.
+\end{equation}
+
+Integrating again:
+\begin{equation}
+v_z(r) = \frac{1}{4\mu}\frac{dp}{dz}r^{2} + C_2.
+\end{equation}
+
+Applying \(v_z(R)=0\):
+\begin{equation}
+C_2 = -\frac{1}{4\mu}\frac{dp}{dz}R^{2}.
+\end{equation}
+
+Thus the velocity profile is:
+\begin{equation}
+v_z(r) = \frac{1}{4\mu}\frac{dp}{dz}(r^{2} - R^{2}).
+\label{eq:velocity_profile}
+\end{equation}
+
+\subsection{Volumetric Flow Rate}
+
+\begin{equation}
+Q = \int_0^R v_z(r) (2\pi r)\,dr = -\frac{\pi R^{4}}{8\mu}\frac{\Delta p}{\ell}.
+\label{eq:poiseuille}
+\end{equation}
+
+\subsection{Mean and Maximum Velocity}
+
+\begin{equation}
+V = \frac{Q}{\pi R^{2}} = \frac{R^{2}}{8\mu}\frac{\Delta p}{\ell},
+\end{equation}
+
+\begin{equation}
+v_{\max} = \frac{R^{2}}{4\mu}\frac{\Delta p}{\ell} = 2V.
+\end{equation}
+
+\subsection{Non-Dimensional Velocity Profile}
+
+\begin{equation}
+\frac{v_z(r)}{v_{\max}} = 1 - \left(\frac{r}{R}\right)^2.
+\label{eq:nondim_profile}
+\end{equation}
+
+\subsection{Variable Definitions}
+
+\begin{itemize}
+\item $r$: Radial distance from tube center (m).
+\item $R$: Tube radius (m).
+\item $z$: Axial coordinate (m).
+\item $v_z(r)$: Axial velocity as a function of radius (m/s).
+\item $v_{\max}$: Maximum velocity at $r = 0$ (m/s).
+\item $V$: Mean velocity over cross-section (m/s).
+\item $Q$: Volumetric flow rate (m$^{3}$/s).
+\item $\Delta p$: Pressure drop along tube length (Pa).
+\item $\ell$: Length over which $\Delta p$ acts (m).
+\item $\mu$: Dynamic viscosity (Pa·s).
+\item $\rho$: Density (kg/m$^{3}$).
+\end{itemize}
+
+
+
+
+% 2D incompressible Navier--Stokes and continuity
+The two-dimensional incompressible Navier--Stokes equations (Cartesian coordinates \(x,y\)) and continuity are
+\begin{align}
+\rho\left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y}\right)
+&= -\frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) + \rho f_x,
+\label{eq:NS_x}\\[6pt]
+\rho\left(\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y}\right)
+&= -\frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}\right) + \rho f_y,
+\label{eq:NS_y}\\[6pt]
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} &= 0,
+\label{eq:continuity}
+\end{align}
+where \(u(x,y,t)\) and \(v(x,y,t)\) are the velocity components in the \(x\)- and \(y\)-directions, respectively, \(p(x,y,t)\) is pressure, \(\rho\) is density, \(\mu\) dynamic viscosity, and \(\mathbf{f}=(f_x,f_y)\) body forces per unit mass.
+
+\subsection*{Assumptions (single-line statement)}
+Assuming steady (\(\partial/\partial t=0\)), unidirectional fully-developed flow in the \(x\)-direction (\(v\equiv0\), \(u=u(y)\), \(\partial u/\partial x=0\)), negligible body forces in \(x\) (or included in pressure gradient), and constant viscosity and density; under these assumptions all terms in \eqref{eq:NS_x} except the pressure gradient and the viscous term in \(y\) vanish.
+
+Using those assumptions, equation \eqref{eq:NS_x} reduces to the ordinary differential equation
+\begin{equation}
+0 = -\frac{\mathrm{d}p}{\mathrm{d}x} + \mu \frac{\mathrm{d}^2 u}{\mathrm{d}y^2},
+\label{eq:reduced}
+\end{equation}
+while \eqref{eq:NS_y} gives hydrostatic balance (or \(\partial p/\partial y=0\) if gravity absent), and continuity is satisfied trivially by \(v=0\) and \(\partial u/\partial x=0\).
+
+\section{Solution for flow between parallel plates (\(y=\pm h/2\))}
+
+Integrate \eqref{eq:reduced} twice with respect to \(y\). Write the constant streamwise pressure gradient as \(G\equiv \mathrm{d}p/\mathrm{d}x\) (note \(G\) is negative for flow in positive \(x\) if pressure decreases along \(x\)):
+\begin{align}
+\mu \frac{\mathrm{d}^2 u}{\mathrm{d}y^2} &= G,
+\label{eq:ode1}\\[4pt]
+\frac{\mathrm{d}u}{\mathrm{d}y} &= \frac{G}{\mu}y + C_1,
+\label{eq:ode_int1}\\[4pt]
+u(y) &= \frac{G}{2\mu}y^2 + C_1 y + C_2,
+\label{eq:ode_int2}
+\end{align}
+where \(C_1,C_2\) are integration constants.
+
+Apply symmetry / boundary conditions. For flow between two stationary plates located at \(y=\pm h/2\) we have no-slip
+\begin{align}
+u\!\left(y=\tfrac{h}{2}\right) &= 0, \label{bc1}\\
+u\!\left(y=-\tfrac{h}{2}\right) &= 0. \label{bc2}
+\end{align}
+Subtracting the two boundary conditions eliminates \(C_2\) and yields \(C_1=0\) (symmetry implies zero shear at the centreline). Solving for \(C_2\) gives
+\begin{align}
+C_1 &= 0, \label{C1}\\
+C_2 &= -\frac{G}{8\mu}h^2. \label{C2}
+\end{align}
+
+Substitute back to obtain the velocity profile
+\begin{equation}
+u(y) \;=\; \frac{G}{2\mu}\,y^2 - \frac{G}{8\mu}\,h^2
+\;=\; \frac{G}{2\mu}\!\left(y^2 - \frac{h^2}{4}\right).
+\label{eq:velocity_y}
+\end{equation}
+
+It is conventional to express with \(-\) sign if we set \(G=-\mathrm{d}p/\mathrm{d}x\) as the negative pressure gradient (so \(G>0\) when pressure decreases in \(x\)):
+\begin{equation}
+u(y) \;=\; -\frac{1}{2\mu}\left(\frac{\mathrm{d}p}{\mathrm{d}x}\right)\!\left(\frac{h^2}{4}-y^2\right).
+\label{eq:velocity_y_convention}
+\end{equation}
+
+Maximum velocity at the centerline \(y=0\):
+\begin{equation}
+u_{\max}=u(0)= -\frac{1}{8\mu}\left(\frac{\mathrm{d}p}{\mathrm{d}x}\right) h^2.
+\label{eq:umax}
+\end{equation}
+
+Volumetric flow rate per unit span (unit depth in \(z\)) is
+\begin{align}
+Q' &= \int_{-h/2}^{h/2} u(y)\,\mathrm{d}y
+    = -\frac{1}{12\mu}\left(\frac{\mathrm{d}p}{\mathrm{d}x}\right)h^3.
+\label{eq:flowrate}
+\end{align}
+Alternatively, in terms of \(u_{\max}\):
+\begin{equation}
+Q' \;=\; \frac{2}{3}u_{\max}\,h.
+\label{eq:flowrate_umax}
+\end{equation}
+
+\section*{Variable definitions}
+\begin{description}
+  \item[\(x\)] streamwise coordinate (m).
+  \item[\(y\)] wall-normal coordinate; plates at \(y=\pm h/2\) (m).
+  \item[\(h\)] total channel height (distance between plates) (m).
+  \item[\(u(x,y,t)\)] streamwise velocity component (m\,s\(^{-1}\)).
+  \item[\(v(x,y,t)\)] wall-normal velocity component (m\,s\(^{-1}\)).
+  \item[\(p(x,y,t)\)] pressure (Pa).
+  \item[\(\rho\)] fluid density (kg\,m\(^{-3}\)).
+  \item[\(\mu\)] dynamic viscosity (Pa\,s).
+  \item[\(G\)] shorthand for \(\mathrm{d}p/\mathrm{d}x\) (Pa\,m\(^{-1}\)); take care of its sign convention.
+  \item[\(Q'\)] volumetric flow rate per unit span (m\(^2\)s\(^{-1}\)).
+  \item[\(u_{\max}\)] maximum (centerline) velocity (m\,s\(^{-1}\)).
+\end{description}
+
+\section*{Short answers to your conceptual questions}
+\begin{itemize}
+  \item \textbf{If I fix the wall temperature is it Dirichlet or Neumann?}\\
+    Fixing the wall temperature is a Dirichlet boundary condition (value specified). A Neumann thermal condition would be specifying the heat flux \(\left.k\frac{\partial T}{\partial n}\right|_{\text{wall}}\).
+  \item \textbf{Is ``momentum'' the convective term in Navier--Stokes?}\\
+    The convective term is \((\mathbf{u}\cdot\nabla)\mathbf{u}\) and represents convective momentum transport (nonlinear advection of momentum). ``Momentum equation'' refers to the whole Navier--Stokes momentum balance, of which the convective term is one part.
+  \item \textbf{When you call second-order upwind for momentum what does it change?}\\
+    Second-order upwind increases the spatial accuracy of the discretisation of the convective (advection) term from first to second order. Practically this reduces numerical diffusion and gives a sharper profile for velocity/quantity gradients, at the cost of slightly larger stencil and potential small non-physical oscillations if the solution has steep discontinuities. It modifies how face values are reconstructed (quadratic/linear reconstruction instead of first-order backward).
+\end{itemize}

@@ -1,0 +1,48 @@
+\chapter{Methodology}
+\section{Domain specification}
+% \begin{figure}[h]
+% 	\centering
+% 	\begin{subfigure}[b]{0.9\textwidth} % Adjust width to your preference
+% 		\includegraphics[width=\textwidth]{./contours/3ddomain.pdf}
+% 		\caption{Schematic of the geometry along with the boundary conditions used in the  3D simulations.}
+% 		\label{fig:3ddomain}
+% 	\end{subfigure}
+% 	\vspace{0.5cm} % Adds space between the subfigures
+% 	\begin{subfigure}[b]{0.9\textwidth} % Adjust width to your preference
+% 		\includegraphics[width=\textwidth]{./contours/topview.eps}
+% 		\caption{Top view representation of geometry and  the angle of sweep $\phi$ is depicted. }
+% 		\label{fig:topview}
+% 	\end{subfigure}
+% 	\caption{The three dimensional computational domain and the sweep}
+% 	\label{fig:computational_domaim}
+% \end{figure}
+
+% For shock-wave/Boundary layer interactions cases previous work such as \cite{raja}and \cite{Lusher_2020} has used symmetric boundary and quasi-2-dimensional periodic infinite span however, in swept ramp case neither of these methods is useful. To capture the effects of both swept ramp and sidewalls an enclosed domain has to be specified. In this work, the domain has been taken from \citep{raja} and extended the domain to get an \ac{AR} of 1 for $y$ and $z$ with 115-dimensional units. The length of the channel is 400 dimensional units within this channel a ramp has been introduced at 210 units from the origin at $z=0$ and further mentioned as P1. This ramp is swept with an angle of $\phi=3^\circ$ that ends 6.02 units away in x from P1 and $z=115$ units away from the origin this is named as P2. The swept ramp is elevated at an angle of $\theta=6.8^\circ$ as show in the \cref{fig:3ddomain}
+% The OpenSBLIFVM solver solves compressible Navier-stokes equation using \ac{FVM} which discretizes the cells domain into smaller cells which are computed parallel with the use of \ac{GPGPU}. The \ac{AR} 1 configuration is used as base geometry.\\
+% As the solver only supports structured meshes the transfinite algorithm is used to implement meshing. The base mesh has been taken from \Citep{raja} for comparison purposes. To capture the property changes near walls and ramp mesh stretching was used this will provide finer cells. To overcome computational errors that are caused due to mesh refinement a spacing distance of 0.04 is fixed as the minimum cell length near the wall. This tolerance helped in running the solution for different grid sizes.
+% 
+% % The geometry looks closed to ignore such assumptions we have used boundary conditions for the walls as they are mentioned in Raja et al. For the front and back walls of the geometry Supersonic inflow and supersonic outflow boundaries are applied. For the top wall supersonic outflow is applied and for the rest of the walls wall boundary is applied. These wall boundaries are also adiabatic walls which ensure that there is no heat transfer across the walls. For the inflow velocity profile similarity solution for laminar flow is used (taken from the book of FM White on viscous fluid flows). The Reynolds number of the flow is $3 \times 10^5$ and it is shown that for our case the thickness of our boundary layer is $\text{Re}_\delta$ = 950 .The velocity of the flow is Mach 2 and to validate the runs grid independent studies were done considering the centre-line separation bubble length as the residuals need long time iterations to produce meaningful results which are not preferable for laminar runs. This criterion massively reduced the computational time. Temporal and spatial grid independence tests are done to assure the results and accuracy of the solver. Even though the computational time is less comparatively these runs took days which still needs optimization. To computational cost and time linear restart files of the current simulation were produced. These restart files are linearly interpolated for other grids and plugged in the solver. This will help the solution to converge quickly compared to the solution which start from 0. As the grid is structured linear interpolation has given the same similar results compared to higher order interpolations with the help of tolerance.
+
+
+\section{Initial conditions}
+%The simulation domain is initialised with a boundary layer profile obtained from the similarity solution of the compressible Blassius equations. the Reynolds number at the starting of the ramp at z=0 is $3\times10^5$
+%to reduce the computational effort the inflow is initialised with a boundary layer profile corresponding to a Reynolds number based on boundary layers($Re_\delta*$) of 950. 
+
+%The inflow boundary layer profile is used to initialise the flow and is taken from the similarity solution of compressible Blasius equation \cite{white2006viscous}. The inflow boundary layer thickness ($Re_\delta*$) is 950 
+
+% The inflow boundary condition is initialised on at the zeroth $x$ plane of the domain with a boundary
+% layer profile obtained from the similarity solution of compressible Blasius equation that is given by White and Majdalani (2006) \cite{white2006viscous}. The Reynolds number based on the boundary layer thickness ($Re_\delta$ ) at the inflow is 950, which corresponds to a Reynolds number of 3 × 10, and the free stream Mach number is 2.
+% 
+% 
+
+
+
+
+
+
+
+
+
+
+
+
